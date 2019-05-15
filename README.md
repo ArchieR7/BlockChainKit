@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/BlockChainKit.svg?style=flat)](https://cocoapods.org/pods/BlockChainKit)
 [![Platform](https://img.shields.io/cocoapods/p/BlockChainKit.svg?style=flat)](https://cocoapods.org/pods/BlockChainKit)
 
+## 🔏 BlockChainKit 🔏
+The BlockChainKit is a Swift library provides mnemonic generation and validation with 8 languages, and it implements `NSLinguisticTagger` to detect mnemonic language automatically that you do not need to set language 🌍.
+
 ## Usage
 
 ### Create mnemonic
@@ -20,7 +23,7 @@ let mnemonicWith256Bytes = Mnemonic.create(strength: .words24)
 ```
 
 ### Validate mnemonic
-```
+```swift
 do {
     try Mnemonic.valdiate(mnemonic)
 } catch {
@@ -33,6 +36,9 @@ do {
         }
     }
 }
+
+// valdiate with specific language
+try Mnemonic.valdiate(mnemonic, wordlist: .English)
 ```
 
 ## Example

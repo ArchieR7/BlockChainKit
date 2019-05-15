@@ -48,9 +48,20 @@ class Tests: XCTestCase {
             default: XCTFail()
             }
         }
-        mnemonic = "scale current glide mimic okay offer hawk maple clump farm home spice "
+        mnemonic = "scale current glide mimic okay offer hawk maple clump farm home spice"
         do {
             try Mnemonic.validate(mnemonic)
+            XCTFail()
+        } catch {
+            guard let error = error as? MnemonicError else { return XCTFail() }
+            switch error {
+            case .invalid: return
+            default: XCTFail()
+            }
+        }
+        mnemonic = "scale current glide mimic okay offer hawk maple clump spice farm home"
+        do {
+            try Mnemonic.validate(mnemonic, wordlist: .Japanese)
             XCTFail()
         } catch {
             guard let error = error as? MnemonicError else { return XCTFail() }
