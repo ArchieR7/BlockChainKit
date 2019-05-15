@@ -64,9 +64,7 @@ public final class Mnemonic {
 
     public static func validate(_ mnemonic: String, wordlist: WordList? = nil) throws {
         let mnemonicArray = mnemonic.split(separator: " ")
-        guard let words = wordlist?.words ?? detectWordlist(mnemonic)?.words else {
-            throw MnemonicError.setUp("Wordlist")
-        }
+        guard let words = wordlist?.words ?? detectWordlist(mnemonic)?.words else { fatalError("Mnemonic word list") }
         var invalidWords = [String]()
         mnemonicArray.forEach {
             let word = String($0)
@@ -86,7 +84,7 @@ public final class Mnemonic {
         guard let strength = Strength(wordCount: mnemonicArray.count) else { throw MnemonicError.length }
         let entropyHash = entropy[0..<strength.rawValue].split(by: 8).compactMap { Int($0, radix: 2) }.map { UInt8($0) }
         let checkSum = entropy[strength.rawValue..<entropy.count]
-        guard let number = entropyHash.sha256().first else { throw MnemonicError.setUp("entropy hash") }
+        guard let number = entropyHash.sha256().first else { fatalError("Entropy hash in \(self)") }
         guard pad(String(number, radix: 2), toSize: 8)[0..<strength.checkSumStrength] == checkSum else {
             throw MnemonicError.invalid
         }
@@ -146,5 +144,5 @@ extension String {
 
 
 public enum MnemonicError: Error {
-    case words([String]), invalid, setUp(String), length
+    case words([String]), invalid, length
 }

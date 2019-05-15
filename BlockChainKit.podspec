@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BlockChainKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BlockChainKit.'
+  s.summary          = '💰A blockchain toolkit with Swift.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+The BlockChainKit is a Swift library provides mnemonic generation and validation with 8 languages, and it implements `NSLinguisticTagger` to detect mnemonic language automatically that you do not need to set language 🌍.
                        DESC
 
   s.homepage         = 'https://github.com/Archie/BlockChainKit'

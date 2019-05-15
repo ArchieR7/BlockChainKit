@@ -31,7 +31,6 @@ do {
         switch error {
             case .length: // length should be 12, 15, 18, 21, 24
             case .invalid: // validate mnemonic with check sum
-            case .setUp: // with framework's issue (e.g wordlist)
             case let .words(words): // contains invalid words
         }
     }
