@@ -1,0 +1,6 @@
+framework module BlockChainKit {
+  umbrella header "BlockChainKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

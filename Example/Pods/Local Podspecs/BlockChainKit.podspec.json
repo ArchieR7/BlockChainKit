@@ -1,0 +1,28 @@
+{
+  "name": "BlockChainKit",
+  "version": "0.1.0",
+  "summary": "A short description of BlockChainKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Archie/BlockChainKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Archie": "https://twitter.com/ChangArchie"
+  },
+  "source": {
+    "git": "https://github.com/Archie/BlockChainKit.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/ChangArchie",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "BlockChainKit/Classes/**/*",
+  "dependencies": {
+    "CryptoSwift": [
+      "~> 1.0.0"
+    ]
+  }
+}

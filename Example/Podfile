@@ -1,0 +1,11 @@
+platform :ios, '11.0'
+use_frameworks!
+
+target 'BlockChainKit_Example' do
+  pod 'BlockChainKit', :path => '../'
+
+  target 'BlockChainKit_Tests' do
+    inherit! :search_paths
+    
+  end
+end

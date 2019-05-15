@@ -1,0 +1,6 @@
+framework module Pods_BlockChainKit_Example {
+  umbrella header "Pods-BlockChainKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

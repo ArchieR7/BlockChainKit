@@ -1,0 +1,23 @@
+PODS:
+  - BlockChainKit (0.1.0):
+    - CryptoSwift (~> 1.0.0)
+  - CryptoSwift (1.0.0)
+
+DEPENDENCIES:
+  - BlockChainKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+
+EXTERNAL SOURCES:
+  BlockChainKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BlockChainKit: 34c14fd05b64a6dacdb00c407643be1f2e501ec4
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+
+PODFILE CHECKSUM: a37f9f1b868807edf1cfa3733a092381980e0b18
+
+COCOAPODS: 1.7.0.rc.1
