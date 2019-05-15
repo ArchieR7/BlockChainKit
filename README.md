@@ -40,11 +40,23 @@ do {
 try Mnemonic.valdiate(mnemonic, wordlist: .English)
 ```
 
+### Create seed from mnemonic
+```swift
+Mnemonic.createSeed(mnemonic).toHexString()
+```
+
+## Feature
+
+- [ ] BIP32
+- [x] BIP39
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+- Swift 5.0
 
 ## Installation
 
@@ -52,7 +64,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit'
+pod 'BlockChainKit', '~> 0.1.1'
 ```
 
 ## Author

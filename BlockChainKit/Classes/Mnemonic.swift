@@ -90,6 +90,16 @@ public final class Mnemonic {
         }
     }
 
+    public static func createSeed(_ mnemonic: String, passphrase: String = String()) -> Data {
+        guard let password = mnemonic.decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
+            fatalError("Nomailizing password failed in \(self)")
+        }
+        guard let salt = ("mnemonic" + passphrase).decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
+            fatalError("Nomailizing salt failed in \(self)")
+        }
+        return Crypto.PBKDF2SHA512(password: password.bytes, salt: salt.bytes)
+    }
+
     private static func detectWordlist(_ text: String) -> WordList? {
         switch NSLinguisticTagger.dominantLanguage(for: text) {
         case "en": return .English

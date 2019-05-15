@@ -72,6 +72,15 @@ class Tests: XCTestCase {
         }
     }
 
+    func testSeed() {
+        let mnemonic = "scale current glide mimic okay offer hawk maple clump spice farm home"
+        let seed = """
+3bfb45bf050727cf2aa8f3033ba13649325ea53af91311787f91c59ca00d75fe
+9e5efb8f2d2881c6739d3cec6502855b0e49c67e2c610293d2ecb147a665ad38
+"""
+        XCTAssertEqual(Mnemonic.createSeed(mnemonic).toHexString(), seed.replacingOccurrences(of: "\n", with: String()))
+    }
+
     func testCreateMnemonic() {
         print("ℹ️ mnemonic: \(mnemonicWith128Bytes) ℹ️")
         validate(mnemonicWith128Bytes)

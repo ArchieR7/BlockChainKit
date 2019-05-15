@@ -1,8 +1,8 @@
 {
   "name": "BlockChainKit",
   "version": "0.1.0",
-  "summary": "A short description of BlockChainKit.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "💰A blockchain toolkit with Swift.",
+  "description": "The BlockChainKit is a Swift library provides mnemonic generation and validation with 8 languages, and it implements `NSLinguisticTagger` to detect mnemonic language automatically that you do not need to set language 🌍.",
   "homepage": "https://github.com/Archie/BlockChainKit",
   "license": {
     "type": "MIT",
