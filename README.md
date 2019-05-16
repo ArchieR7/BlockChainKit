@@ -45,10 +45,40 @@ try Mnemonic.valdiate(mnemonic, wordlist: .English)
 Mnemonic.createSeed(mnemonic).toHexString()
 ```
 
+### Create private key and public key from seed
+```swift
+let node = HDNode(seed: seed)
+let BIP32RootKey = node.privateExtendedKey()
+```
+
+### Base58 encode and decode
+```swift
+do {
+    try Base58.encode(node.privateExtendedKey())
+} catch {
+    if let error = error as? BaseCodableError {
+        switch error {
+        case .decode: // decode error
+        case .encode: // encode error
+        }
+    }
+}
+```
+
+and it provides a protocol to implement encode or decode with specific base.
+
+```swift
+// you can create a new base with alphabet
+struct Base58: BaseCodable {
+    static let alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+}
+```
+
 ## Feature
 
-- [ ] BIP32
+- [X] BIP32
 - [x] BIP39
+- [ ] BIP44
 
 ## Example
 
@@ -74,3 +104,7 @@ pod 'BlockChainKit', '~> 0.1.1'
 ## License
 
 BlockChainKit is available under the MIT license. See the LICENSE file for more info.
+
+## Reference
+
+- RIPEMD160.swift - [HDWalletKit](https://github.com/yuzushioh/HDWalletKit)

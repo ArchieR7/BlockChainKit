@@ -39,4 +39,6 @@ The BlockChainKit is a Swift library provides mnemonic generation and validation
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'CryptoSwift', '~> 1.0.0'
+  s.dependency 'secp256k1.swift', '~> 0.1.4'
+  s.dependency 'BigInt', '~> 4.0.0'
 end

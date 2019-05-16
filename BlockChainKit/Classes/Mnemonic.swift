@@ -97,7 +97,7 @@ public final class Mnemonic {
         guard let salt = ("mnemonic" + passphrase).decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
             fatalError("Nomailizing salt failed in \(self)")
         }
-        return Crypto.PBKDF2SHA512(password: password.bytes, salt: salt.bytes)
+        return Crypto.PBKDF2SHA512(password: password, salt: salt)
     }
 
     private static func detectWordlist(_ text: String) -> WordList? {

@@ -2,6 +2,7 @@ import XCTest
 import BlockChainKit
 
 class Tests: XCTestCase {
+    private lazy var testMnemonic = "scale current glide mimic okay offer hawk maple clump spice farm home"
     private lazy var mnemonicWith128Bytes = Mnemonic.create()
     private lazy var mnemonicWith160Bytes = Mnemonic.create(strength: .words15)
     private lazy var mnemonicWith192Bytes = Mnemonic.create(strength: .words18)
@@ -20,7 +21,7 @@ class Tests: XCTestCase {
     }
 
     func testValidateMnemonic() {
-        var mnemonic = "scale current glide mimic okay offer hawk maple clump spice farm home"
+        var mnemonic = testMnemonic
         do {
             try Mnemonic.validate(mnemonic)
         } catch {
@@ -73,7 +74,7 @@ class Tests: XCTestCase {
     }
 
     func testSeed() {
-        let mnemonic = "scale current glide mimic okay offer hawk maple clump spice farm home"
+        let mnemonic = testMnemonic
         let seed = """
 3bfb45bf050727cf2aa8f3033ba13649325ea53af91311787f91c59ca00d75fe
 9e5efb8f2d2881c6739d3cec6502855b0e49c67e2c610293d2ecb147a665ad38
@@ -94,6 +95,18 @@ class Tests: XCTestCase {
         validate(mnemonicWith256Bytes)
     }
 
+    func testHDNode() {
+        let seed = Mnemonic.createSeed(testMnemonic)
+        let node = HDNode(seed: seed)
+        let rootKey = """
+xprv9s21ZrQH143K2cYgp2cYiPLz6jwGUq8GeEfd6JDEf4u2DFTnFvkSE5HHKCLFF65dkBqCZ7x5V2aCJDjhqAQz9fn4xuW2iCRBkcH1JAr5EXM
+"""
+        guard let privateExtendedKey = try? Base58.encode(node.privateExtendedKey()) else { return XCTFail() }
+        XCTAssertEqual(privateExtendedKey, rootKey)
+    }
+}
+
+extension Tests {
     private func validate(_ mnemonic: String) {
         do {
             try Mnemonic.validate(mnemonic)
