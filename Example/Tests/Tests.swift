@@ -147,6 +147,12 @@ xpub6Eh5FLJnjDpAA4xWZEZtpYm6gnMon1Ar7oeiWk3qLTNR22UFkEdGWLfHpcTWBHYUGnfEjXAfdaTm
         guard let BTCFirstPrivateKey = BTC.WIF() else { return XCTFail() }
         XCTAssertEqual(BTCFirstPrivateKey, btcFirstPrivateKey)
     }
+
+    func testAddress() {
+        let privateKey = "a845740b6c77162297cf42734fe715f1abe90c6c2790a25b462e337cd33e931e"
+        let address = "0x2d4D3E8Cb7148Bee113d2Ffb42a42f22E8143464"
+        XCTAssertEqual(address, Ethereum.address(privateKey: privateKey))
+    }
 }
 
 extension Tests {

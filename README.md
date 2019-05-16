@@ -89,11 +89,17 @@ let ETHAccount = node.derived(.hardened(44)).derived(.hardened(60)).derived(.har
 let ETHPrivateKey = ETHAccount.derived(.notHardened(0)).derived(.notHardened(0)).ethPrivateKey
 ```
 
+### Create Ethereum address from private key
+```swift
+let address = Ethereum.address(privateKey: privateKey)
+```
+
 ## Feature
 
-- [X] BIP32
+- [x] BIP32
 - [x] BIP39
-- [X] BIP44
+- [x] BIP44
+- [x] BIP55
 
 ## Example
 
