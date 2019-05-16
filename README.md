@@ -74,11 +74,26 @@ struct Base58: BaseCodable {
 }
 ```
 
+### Derived
+```swift
+// BTC - m/44'/0'/0'
+let account = node.derived(.hardened(44)).derived(.hardened(0)).derived(.hardened(0))
+// BTC - m/44'/0'/0'/0
+let chain = account.derived(.notHardened(0))
+// BTC - m/44'/0'/0'/0/0
+let addressNode = chain.derived(.notHardened(0))
+let BTCPrivateKey = addressNode.wif() 
+
+// ETH - m/44'/60'/0'/0/0
+let ETHAccount = node.derived(.hardened(44)).derived(.hardened(60)).derived(.hardened(0))
+let ETHPrivateKey = ETHAccount.derived(.notHardened(0)).derived(.notHardened(0)).ethPrivateKey
+```
+
 ## Feature
 
 - [X] BIP32
 - [x] BIP39
-- [ ] BIP44
+- [X] BIP44
 
 ## Example
 
