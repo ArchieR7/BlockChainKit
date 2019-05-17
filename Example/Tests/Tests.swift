@@ -152,6 +152,9 @@ xpub6Eh5FLJnjDpAA4xWZEZtpYm6gnMon1Ar7oeiWk3qLTNR22UFkEdGWLfHpcTWBHYUGnfEjXAfdaTm
         let privateKey = "a845740b6c77162297cf42734fe715f1abe90c6c2790a25b462e337cd33e931e"
         let address = "0x2d4D3E8Cb7148Bee113d2Ffb42a42f22E8143464"
         XCTAssertEqual(address, Ethereum.address(privateKey: privateKey))
+        let BTCPrivateKey = "L4uDufSWBE7gpKoBpCFuJKvo2yxkuTVVVtgMPj8nFpbSVjAPuMEJ"
+        let BTCAddress = "1gBMhAqrL3y1imMdEWbLN9PxjFo1bqNEE"
+        XCTAssertEqual(BTCAddress, Bitcoin.address(privateKey: BTCPrivateKey)!)
     }
 }
 

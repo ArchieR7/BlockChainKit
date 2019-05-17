@@ -94,6 +94,11 @@ let ETHPrivateKey = ETHAccount.derived(.notHardened(0)).derived(.notHardened(0))
 let address = Ethereum.address(privateKey: privateKey)
 ```
 
+### Create Bitcoin address from private key
+```swift
+let address = Bitcoin.address(privateKey: privateKey)
+```
+
 ## Feature
 
 - [x] BIP32
@@ -115,7 +120,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 0.1.1'
+pod 'BlockChainKit', '~> 1.0.0'
 ```
 
 ## Author
