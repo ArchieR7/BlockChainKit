@@ -27,7 +27,7 @@ The BlockChainKit is a Swift library provides mnemonic generation and validation
   s.author           = { 'Archie' => 'https://twitter.com/ChangArchie' }
   s.source           = { :git => 'https://github.com/ArchieR7/BlockChainKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ChangArchie'
-
+  s.swift_versions = '5.0'
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'BlockChainKit/Classes/**/*'

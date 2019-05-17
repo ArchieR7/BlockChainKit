@@ -130,7 +130,3 @@ pod 'BlockChainKit', '~> 1.0.0'
 ## License
 
 BlockChainKit is available under the MIT license. See the LICENSE file for more info.
-
-## Reference
-
-- RIPEMD160.swift - [HDWalletKit](https://github.com/yuzushioh/HDWalletKit)

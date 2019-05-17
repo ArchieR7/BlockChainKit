@@ -1,19 +1,20 @@
 //
-//  RIPEMD160.swift
-//  WalletKit
+// RIPEMD160.swift
+// BlockChainKit
 //
-//  Created by yuzushioh on 2018/02/04.
-//  Copyright © 2018 yuzushioh. All rights reserved.
+// https://stackoverflow.com/questions/43091858/swift-hash-a-string-using-hash-hmac-with-ripemd160/43191938
 //
+
 import Foundation
 
-struct RIPEMD160 {
+public struct RIPEMD160 {
 
     private var MDbuf: (UInt32, UInt32, UInt32, UInt32, UInt32)
     private var buffer: Data
+
     private var count: Int64 // Total # of bytes processed.
 
-    private init() {
+    public init() {
         MDbuf = (0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476, 0xc3d2e1f0)
         buffer = Data()
         count = 0
@@ -306,39 +307,45 @@ struct RIPEMD160 {
                  MDbuf.0 &+ bb &+ ccc)
     }
 
-    mutating private func update(data: Data) {
-        data.withUnsafeBytes { (ptr: UnsafePointer<UInt8>) in
-            var ptr = ptr
-            var length = data.count
-            var X = [UInt32](repeating: 0, count: 16)
+    public mutating func update(data: Data) {
+        var X = [UInt32](repeating: 0, count: 16)
+        var pos = data.startIndex
+        var length = data.count
 
-            // Process remaining bytes from last call:
-            if buffer.count > 0 && buffer.count + length >= 64 {
-                let amount = 64 - buffer.count
-                buffer.append(ptr, count: amount)
-                buffer.withUnsafeBytes { _ = memcpy(&X, $0, 64) }
-                compress(X)
-                ptr += amount
-                length -= amount
+        // Process remaining bytes from last call:
+        if buffer.count > 0 && buffer.count + length >= 64 {
+            let amount = 64 - buffer.count
+            buffer.append(data[..<amount])
+            X.withUnsafeMutableBytes {
+                _ = buffer.copyBytes(to: $0)
             }
-            // Process 64 byte chunks:
-            while length >= 64 {
-                memcpy(&X, ptr, 64)
-                compress(X)
-                ptr += 64
-                length -= 64
-            }
-            // Save remaining unprocessed bytes:
-            buffer = Data(bytes: ptr, count: length)
+            compress(X)
+            pos += amount
+            length -= amount
         }
+
+        // Process 64 byte chunks:
+        while length >= 64 {
+            X.withUnsafeMutableBytes {
+                _ = data[pos..<pos+64].copyBytes(to: $0)
+            }
+            compress(X)
+            pos += 64
+            length -= 64
+        }
+
+        // Save remaining unprocessed bytes:
+        buffer = data[pos...]
         count += Int64(data.count)
     }
 
-    mutating private func finalize() -> Data {
+    public mutating func finalize() -> Data {
         var X = [UInt32](repeating: 0, count: 16)
         /* append the bit m_n == 1 */
         buffer.append(0x80)
-        buffer.withUnsafeBytes { _ = memcpy(&X, $0, buffer.count) }
+        X.withUnsafeMutableBytes {
+            _ = buffer.copyBytes(to: $0)
+        }
 
         if (count & 63) > 55 {
             /* length goes to next block */
@@ -353,26 +360,21 @@ struct RIPEMD160 {
         X[15] = (lswlen >> 29) | (mswlen << 3)
         compress(X)
 
-        var data = Data(count: 20)
-        data.withUnsafeMutableBytes { (ptr: UnsafeMutablePointer<UInt32>) in
-            ptr[0] = MDbuf.0
-            ptr[1] = MDbuf.1
-            ptr[2] = MDbuf.2
-            ptr[3] = MDbuf.3
-            ptr[4] = MDbuf.4
-        }
-
         buffer = Data()
-
-        return data
+        let result = [MDbuf.0, MDbuf.1, MDbuf.2, MDbuf.3, MDbuf.4]
+        return result.withUnsafeBytes { Data($0) }
     }
 }
 
-extension RIPEMD160 {
-    static func hash(_ message: Data) -> Data {
+public extension RIPEMD160 {
+
+    static func hash(message: Data) -> Data {
         var md = RIPEMD160()
         md.update(data: message)
         return md.finalize()
     }
-}
 
+    static func hash(message: String) -> Data {
+        return RIPEMD160.hash(message: message.data(using: .utf8)!)
+    }
+}

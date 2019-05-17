@@ -12,13 +12,13 @@ public enum Ethereum {
         let privateKeyData = Data(hex: privateKey)
         let publicKeyData = HDNode.publicKey(privateKey: privateKeyData, isCompressed: false)
         let formattedData = (Data(hex: "0x") + publicKeyData).dropFirst()
-        let addressData = Data(bytes: SHA3(variant: .keccak256).calculate(for: formattedData.bytes)).suffix(20)
+        let addressData = Data(SHA3(variant: .keccak256).calculate(for: formattedData.bytes)).suffix(20)
         return "0x" + EIP55(addressData)
     }
 
     static func EIP55(_ data: Data) -> String {
         let address = data.toHexString()
-        let hashData = Data(bytes: SHA3(variant: .keccak256).calculate(for: address.data(using: .ascii)!.bytes))
+        let hashData = Data(SHA3(variant: .keccak256).calculate(for: address.data(using: .ascii)!.bytes))
         let hash = hashData.toHexString()
         return zip(address, hash).map {
             switch $0 {
