@@ -105,13 +105,13 @@ let address = Bitcoin.address(privateKey: privateKey)
 - [x] BIP39
 - [x] BIP44
 - [x] BIP55
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+- [ ] signature for BTC transaction
+- [ ] signature for ETH transaction
 
 ## Requirements
 
+- iOS 11.0+
+- Xcode 10.2
 - Swift 5.0
 
 ## Installation
