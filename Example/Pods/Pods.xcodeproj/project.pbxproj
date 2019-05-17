@@ -7,182 +7,182 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03195F56D47AB4E920CCA24F8628B0F9 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190B563C64B288846DE863B6E8026F3 /* UInt32+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		00BCA4CECB5013CFE72E481EBC0D842A /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E0169547EA22F2B842453C12E2567 /* CFB.swift */; };
+		0264ED1E4E3EA6F5148F75F01915BD22 /* Wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479A02B2F089E227AD452ACD082A28D /* Wordlist.swift */; };
 		051AB161DBE243347E412BFE77619D6F /* main_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3975893D661CBB4C66D89EFE32831637 /* main_impl.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		06A0B987CD6BD684E1693FE4145AF91D /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F063BE9B8B977BCA461F492415461E9D /* Strideable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		074EB8D6AE61AB18D9872C478766B443 /* Pods-BlockChainKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D83EE831B752C8B6DBBFB9F4AD77B /* Pods-BlockChainKit_Example-dummy.m */; };
-		079CE062380912DF3CA20A0C49E17079 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CB6A8F2A938CD682FAEFDD68CC090A /* SHA1.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		093610862334E634093760923FEF2D8A /* lax_der_privatekey_parsing.c in Sources */ = {isa = PBXBuildFile; fileRef = EC6C117751B1F50374BEB7EA3B08093E /* lax_der_privatekey_parsing.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		09596351C510255C321C170B3AA1FAD7 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75243FB877C53BBD0D660F0C7039CEA7 /* Cipher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0AB1BB5D9886158D9064364722866BBC /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC744B65E9234D830159AE0C8456764F /* Addition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0B1B8B42CF654309E917FBD79283F485 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019AF5785A6AF2AEF2D9C6B8A1D67895 /* AEADChaCha20Poly1305.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0C7D928FC7D1A7B6AFE5AFFB3C372E5D /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7AE61F139103EB5B0384477B276F6 /* SHA3.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0E2255A092502FE9DC45E53095D595A9 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD947ECFE083CB1D1CFB0F96DE6E7CB6 /* Rabbit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		078CA673C7593084366AE576603F2791 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C693830E748AA98C97DFCED05CF9B14 /* CBCMAC.swift */; };
+		0962BFEB4F7D3AA6E79E4B9283702A8D /* Data Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B271A0EA3A60089640898609A2AF9708 /* Data Conversion.swift */; };
+		0EB4AC5E75A83192DABEBDEA9B193515 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F20A8B5C5D0AC9E60829394B48CD3 /* Mnemonic.swift */; };
+		0F04F33238007B9A37D7C9B34530758B /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE03F4B00652F3A7453E9C5C127B09C2 /* PBKDF2.swift */; };
+		0F15E6C5A4332CD0BCDBCE05B6D24AAD /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7055B09338F2F0476F5D288253236C /* PKCS7Padding.swift */; };
 		0F6A092E2A8889B3083043B76BC01651 /* scalar_4x64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5727EB3ED1565BD2D4C16BA5F72F83 /* scalar_4x64.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		10C6361D801E133D5F5069BC1120B398 /* String Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8195300243D7056B1B53591BCC08D18 /* String Conversion.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		12F1621F8D20A5435E4870FA10631353 /* Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572929ED0CBCE3E87DDB7AE7E6DA600 /* Ethereum.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		13E81A6B3AD13C6677342CCFB8C070BE /* Wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479A02B2F089E227AD452ACD082A28D /* Wordlist.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		146BB2470BAE89B6FBA8F84630CC7002 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810EA4EA8F7B5C6E6EDAE8F852C07D9 /* BatchedCollection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		15080445EEDD7951FC2EEE401321C6C2 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58962CF8C0B5BD5ABEB14FF037500FF6 /* SecureBytes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		145E4C65C0B40F4E72A55A60C09476B4 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF5DF1587CCA033489024AAD76551F /* BlockMode.swift */; };
+		1573EC0257E2FB186A5628A9F6963203 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AF4A481BFAA7E3A2E620019C1D0A8 /* ECB.swift */; };
 		172D5D3EC33AAC865B677625180F3144 /* field_5x52_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7951FC59640110E54F13DF974245FEAC /* field_5x52_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		17C45DD365F085CE8544A49AA193724F /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCE4F71DE6828F6B5539E3B2BEB2EBA /* Bit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		180BD1B2B9B93065636C4CD651E9C35A /* Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA01EFCD99B68EC64EFC8EDE398C49A /* Subtraction.swift */; };
 		191A53041B8C2D14149655FCD473D9AB /* secp256k1.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C612E858377CDC4D8F237C10931DE0A /* secp256k1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19B17A81CDEF28BDD044E4EE3FA74A0D /* field_10x26.h in Headers */ = {isa = PBXBuildFile; fileRef = 06DFCFAEF0D6235CEE3D3F0CC0E2A10D /* field_10x26.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1C2FE79454C85FB9E7F05BF0FE8B0664 /* scalar_low_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = A81ABF9A1019481277EE9F02C561E162 /* scalar_low_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		1C7A39B3082E756B204F4F8E06FBD615 /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9321F2FCDF9C17CC6E337A3151361ABF /* Checksum.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1CCEEF4D2A3DB759082AFE0BEA70D1CA /* BigInt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E66655B9242DDC36CD676570ADCB3A86 /* BigInt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E3E3E37E65C1E532D39CB11AACA004B /* ecdsa_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E3005C30348D80ECFB60F6D4229F31D5 /* ecdsa_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1FA1A3C8C90C1CB21D2C238850E45788 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35576018D95C2D9483345AB6B6172 /* Cryptor.swift */; };
+		20A426ACF81B1A344DFA92205FA288C2 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1EFD8726B41BF3EE85A9131BEC2241 /* Collection+Extension.swift */; };
+		216146AE3598B7299B4A0F1B6B3E5C9A /* HDNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E70C9F9C29EC1CABD3D870B097D6BF /* HDNode.swift */; };
 		219BA904163A0791085EA2630641D396 /* field_5x52_int128_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = A66F9C3F6FE6AC39D7A53A219718C2BC /* field_5x52_int128_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		22AA3FFE1B9CFE30E2BD8B4DE9795532 /* ecmult_const.h in Headers */ = {isa = PBXBuildFile; fileRef = 5913B26B4266BDC7F045A5478399B77B /* ecmult_const.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		23EC701410C82BE092CB9DAD247DC82D /* RandomBytesSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE51DF1D453047CE8392610C44467A /* RandomBytesSequence.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		22E1C75F96AB1E648F25E572CEE9AC7F /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536C367E64C3856CD2ACD6E355F1E1D /* Utils+Foundation.swift */; };
 		241BB735F046752A5C693F7A77B469FB /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = E0BEEA174A3B76154DA3682BC30B65F0 /* hash.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		261B7A2985D17C59BA828185C94F2497 /* Integer Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CAC476D33362125D04F07464C0D5EF /* Integer Conversion.swift */; };
 		27683B29810B6B7D4F3CBA8796FE87B6 /* Pods-BlockChainKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6873C0735849DD362B82F398CADAED29 /* Pods-BlockChainKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28D037F1749DF0DF20FC0369F9269544 /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B192F30419205125770E0810CA02F /* Bitwise Ops.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		29EA9FE046999317A017F16A24B42FD7 /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE03F4B00652F3A7453E9C5C127B09C2 /* PBKDF2.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28B4A7C0AF0958972A2B8DA00AAD0F3A /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D6A27215621B8A3A9C01A27BA95DD /* Blowfish.swift */; };
 		2A229685C33D6FB3A20C02B2B811B226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50742578CF0894244DBC17F35370E1E0 /* Foundation.framework */; };
-		2A23BED218621EBCA1D34CB9E42D84D1 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57B536D225CD7C4C56564C66CFFBE6 /* String+FoundationExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2A3BFF0A2E7CFB1B2ED94351D41D4ED0 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3F5A29869FE8E78EBA16B7B744FF7 /* Division.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2A5EF6AEEE2C528537932B62EBF92D39 /* lax_der_parsing.c in Sources */ = {isa = PBXBuildFile; fileRef = 6932A53FB2A7CAFBEC087F949C3DFBC6 /* lax_der_parsing.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2C0703EFBDAB6055582785F08B80F94A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50742578CF0894244DBC17F35370E1E0 /* Foundation.framework */; };
 		2C6267349B9FE61F5B57F37C08414785 /* secp256k1_recovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D9DB3DBEE666311548A15E938A05340 /* secp256k1_recovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E5B69B2E37608EB162672DDAEEDD8DF /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5B91427E2229278455C99D203B68 /* StreamDecryptor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3029F28BAA92A64530E4068F083BC200 /* secp256k1.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB6EA7F30685F4FF3BDE5A5EF4C026 /* secp256k1.swift-dummy.m */; };
-		30E0A9CC821C22E212DFE63484777DBC /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536C367E64C3856CD2ACD6E355F1E1D /* Utils+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2F8904E2AD47367C359F8313B168116B /* Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19AB4A6E5BAB93DAA2486B2A6EF2AC0 /* Multiplication.swift */; };
+		30E122C455651F0658C2B54717C37A8C /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CB6A8F2A938CD682FAEFDD68CC090A /* SHA1.swift */; };
 		30FF6070F2375EABFE843B5251A32582 /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB4F71313E8A73DA5EE382414759CE /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		327EF39FCDE27B150AD2561056E6AD0A /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1EDA458B0E7AA3B8B73D39C43DD69A /* Bitcoin.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		32E3E8EDF5F857E5E6D694C88FEBB881 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48939835DE7322D2BDED1D364A62C75B /* AES.Cryptors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		33143A804E5B97461B0607A5E49EDF1F /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA260C9BF542F0A8D784F2E6EFEB19 /* Authenticator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		37681D04D3ADE7CEB256253879C9DF1F /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F3820510CC5DA3195F0B5299BFAF8 /* DigestType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		310AE1B77DB6668A93D89B907238D8C7 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C069BFD5CCB53643A11B7A05532701 /* ZeroPadding.swift */; };
+		3470D2410F379B0EE8CCC39791A8632C /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190B563C64B288846DE863B6E8026F3 /* UInt32+Extension.swift */; };
+		3654267FFDE8F2AF94C69B50B5232F64 /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54DD3AAC748BFA05BB1857B0A5255A /* PBKDF1.swift */; };
+		369B45FF9AB5F44DA6012EE032356330 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97481C267FA32C074034EF14C4C044 /* Utils.swift */; };
 		378C0F7E199A2ABD4AC25DD5544BB523 /* scratch_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8352F2177D10A190CE70579B86F813 /* scratch_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		393193DB40F2C522B84FE6F9229FDFB2 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A6D58AE025E5C4DBA8EE82256BAAA /* MD5.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3C671255F835B02D25E01597DC8CC6A5 /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EEFFFD44A372B2FD845A8CF23C9612 /* Rabbit+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		397E6A8338CEC657DC73A6579D46A652 /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E056ACA80345E37921B1AE3C6C7CB /* HMAC+Foundation.swift */; };
+		3BF118D86DC8AD16F7BD06C394166C13 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBABC467C06417C65D360E2C32199C /* BlockModeOptions.swift */; };
+		3CA65A6BE1824B4CF01E1EFCAB312E66 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030FB18305CC76328CF0C9D1E652C2E /* AES.swift */; };
 		3CD4E6BD0E99B1BED225AB8CEBEF7114 /* field.h in Headers */ = {isa = PBXBuildFile; fileRef = C64E436C2718BECBCF1AA67AD7F4F75B /* field.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3E0F0F2CB7D29E0F4C9CAC1386079D98 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776CF5821ADEB5FBCD724136483DECE /* PKCS7.swift */; };
 		3E898A66695E25D1AF59C2B98AE0A8D4 /* ecmult_gen.h in Headers */ = {isa = PBXBuildFile; fileRef = 4556C1F092171463564A39E7D7306607 /* ecmult_gen.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3FA405A4B485CC26C641F3348C8A145B /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1EFD8726B41BF3EE85A9131BEC2241 /* Collection+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		40FF499C4DE7F7A954D05EEB43B3FEF0 /* Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA01EFCD99B68EC64EFC8EDE398C49A /* Subtraction.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		41663B11ACA6EB3B4285D848A487E4BD /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC56BE1416936DD5BB91A51BB7D5183 /* Blowfish+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		42FF87C191E9BA75538DFF9DBA629DCE /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB7CDC92DA8B3E471A20AC88FD572C /* Digest.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		44E1BAAEF04CEF9A362D8EA2B5ABA7B7 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76033CD602EF46186D7B90F68992E79E /* HMAC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		458997FA8909E25D118C739BD8081F18 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F20A8B5C5D0AC9E60829394B48CD3 /* Mnemonic.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		45B1F945CC021439C40DE1DEBE4F8454 /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D3B84941F5EE77FA5A1BA686AC604 /* OFB.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		42203386B9BC18AE01BA0B992706428C /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2F63967C5E78C41642066DAF34D18 /* SHA2.swift */; };
+		465098B1887CDB51199EF388223AD673 /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD6C413206F6988B5807865622845 /* ChaCha20+Foundation.swift */; };
+		466C17F2D923267E359BD43C880809B8 /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353B74831C878B9279C6F3F54DD48A9 /* Hashable.swift */; };
 		46B51C27FB04C7A345600F38B97E51E7 /* secp256k1_ec_mult_static_context.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CF4AF81A8853ECD5930039CBEDF06C1 /* secp256k1_ec_mult_static_context.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		47207558827D440F007E6EE8B23B8932 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90A95A1356DCEB99B7AEE3999F770D5 /* BigInt.framework */; };
-		4A7A454C6667C4AE195017A5F0E86606 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6019203FB4E171774D32B3F8EF3CA /* String+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4EC4E10E9B5F7F0D83A760D7C2F4116F /* Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19AB4A6E5BAB93DAA2486B2A6EF2AC0 /* Multiplication.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		52969D375FFC8126D02F38D60909AA56 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862E4A31FB0EE1488F69FA952DACF85 /* AEAD.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		488796B370E8CC51EB1982B7A747B59F /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273BAD28BBB161573062F0A3032572E3 /* UInt64+Extension.swift */; };
+		49CFC02DEB31FC1A31DB9BE4990DE8C9 /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DFE75AFA433FCC3BD1CCCE7CECFD35 /* HKDF.swift */; };
+		4A011473FAE50E57FD343A9ABFB82BFA /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCE4F71DE6828F6B5539E3B2BEB2EBA /* Bit.swift */; };
+		4A9716DE2F321D0011E75FD6CA5D04B0 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48939835DE7322D2BDED1D364A62C75B /* AES.Cryptors.swift */; };
+		4E0943A289787B0C5D34BD24EB8ED461 /* RandomBytesSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE51DF1D453047CE8392610C44467A /* RandomBytesSequence.swift */; };
 		529EFAC4C75E6B90DE13BD8A7A85A7B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50742578CF0894244DBC17F35370E1E0 /* Foundation.framework */; };
-		53F45CD9D1191DD621FCF7DF594B5A66 /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9FFE59ECFBF0F174BF89A0E9FA879 /* Shifts.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		556069F7A82BC6C05D2CDFAB4F9F2FCD /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA887D258953DE9ED06D479F07B6E13D /* Comparable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		588B6C6E1B36E95CB7F7E621267FA263 /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD6C413206F6988B5807865622845 /* ChaCha20+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5495EC05F4E8F4DBAA3110FC72C681D4 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE6F365BC80E8823F63A4ADC336673 /* RIPEMD160.swift */; };
+		5CB7CE7F04FFCA2EBE605C8AC878CE99 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58962CF8C0B5BD5ABEB14FF037500FF6 /* SecureBytes.swift */; };
 		5CDDFE1D3BBC01E84D7E89F7DA3BA520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50742578CF0894244DBC17F35370E1E0 /* Foundation.framework */; };
-		5CEA44EC0EEE7E5047FBE4A356C3F2D7 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13995C5EFA6966E60D0CA166FFF0F24 /* Operators.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5E0F268A398DA7A6E99ADE187AD15C10 /* field_5x52_asm_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = C65202673D4D47A83ADF8220328FB89B /* field_5x52_asm_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5E189B45F11D4A78C2704105AAD1C49D /* lax_der_privatekey_parsing.c in Sources */ = {isa = PBXBuildFile; fileRef = EC6C117751B1F50374BEB7EA3B08093E /* lax_der_privatekey_parsing.c */; };
+		5E8FA545B8F78A3B99BBA9DB6A231191 /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416943820A466291FEBEB6AF2808EC4 /* BlockEncryptor.swift */; };
 		607AE3E63BA10C846D439813C8012233 /* field_5x52.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA5AB41225584FBF9D968FE8DBC6F48 /* field_5x52.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		608D4A4F35B8B756864B78E3906E24C4 /* hash_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = FC7DD9C07F165F3D1D6DBE1BC6AE91EB /* hash_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		615185F6401D70C7E70F08AC9D056EC5 /* secp256k1_ecdh.h in Headers */ = {isa = PBXBuildFile; fileRef = F030F35C69FBC0697AE5B194BCE48ED7 /* secp256k1_ecdh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62D81E9C682607B3908974E849C2863E /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C285BBE70082819F3FF8E10910AB4B6 /* BlockCipher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		61AC9AB582D1BCB201F8D048CC51890E /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7AE61F139103EB5B0384477B276F6 /* SHA3.swift */; };
 		6317ED5FF3A3DF686C3E422A2FAED83F /* secp256k1.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8929C97306D69D50DA1684C4589D962 /* secp256k1.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6376DD098DEB963533D3A7E399B904AE /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE97992B25DA591E81EF8929F462C97 /* Poly1305.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64248720837F9ABEEC124315D63542E5 /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9FFE59ECFBF0F174BF89A0E9FA879 /* Shifts.swift */; };
+		642C9144BA7A7F6EF6129D13345F6B57 /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA96215545EB520BBBA0925EF44B79B /* Array+Foundation.swift */; };
 		642EFA1D5C7423AD51417AAF9E68F51B /* secp256k1_main.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B00938FCBE648C7C7221529CF6AE419 /* secp256k1_main.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		64472258796A021331078734022FC56C /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18C409DD2CA615990EA3694D169429C /* Random.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64B92A0A26144CBCAD19AA02ABA84FC5 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504DAA59C7DB144FF5C93ECC1D481DB /* Codable.swift */; };
 		652D3F1F7C55E9778B8B44AB9F62AEE6 /* Pods-BlockChainKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CCFBC3A186BAD2628DC28868D41302 /* Pods-BlockChainKit_Tests-dummy.m */; };
-		69742C9FF1C3A705A75B78700DA81AAF /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273BAD28BBB161573062F0A3032572E3 /* UInt64+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6B2B39E0D9043FBC9548D89B1C6450F5 /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D6A27215621B8A3A9C01A27BA95DD /* Blowfish.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		66352C213D90194B0A7C0DC05A54F6F2 /* String Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8195300243D7056B1B53591BCC08D18 /* String Conversion.swift */; };
+		66AE307A670865D01F773934A8DB87FE /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810EA4EA8F7B5C6E6EDAE8F852C07D9 /* BatchedCollection.swift */; };
+		694620A872B341A73F491F185F9670EC /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA260C9BF542F0A8D784F2E6EFEB19 /* Authenticator.swift */; };
+		6BEBD368B77785EDE9EF8514E18CAC0A /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE97992B25DA591E81EF8929F462C97 /* Poly1305.swift */; };
 		6E3AA917EA7CEC0488AD68E6665C7943 /* secp256k1-config.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C8369B20465665DFA3DEE8E71CFDB8 /* secp256k1-config.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		70003B48DC0FBAD2FC7730C2A276D44D /* num_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 092840525FA2900E5A38E21788E25229 /* num_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		740F2F27A8206A975CE76381EBFCE49E /* secp256k1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5C58C3C8A5B131E1967D9DB30054A /* secp256k1.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		77E90D3224684A22394F45B04641D7BF /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4054C5F47200AB77C47FF9594C58DF1 /* Data+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		78E2D46D665926A48AD68550F2972343 /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA550CE71A7693043082CEE2546DD1 /* CryptoSwift-dummy.m */; };
-		79812831E72DEB4C75C61BC0127BBFD1 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60903C1696EF7FA797FD1370156243 /* NoPadding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7AF37D8B573178708C25636A2E6C60EA /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AF4A481BFAA7E3A2E620019C1D0A8 /* ECB.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7E53D1C71FE760E9D81731B7E9E7AABF /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4FD9D372F9E160C5210D99C9A04C /* PCBC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7FEE174B9B87D947925EEA0D465ABDF9 /* Square Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F67103E9596C2F37E38A83F3DB201E /* Square Root.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		725EC2E3FA6D40BBB0EDBB964ECB87D7 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7717FB02AC4219F03137D9B09CFA95 /* UInt128.swift */; };
+		78CB7E9DE4B292D3350AC36226590197 /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AA550CE71A7693043082CEE2546DD1 /* CryptoSwift-dummy.m */; };
+		7C6EE5C9505CF3C31BB3DE0876C53286 /* lax_der_parsing.c in Sources */ = {isa = PBXBuildFile; fileRef = 6932A53FB2A7CAFBEC087F949C3DFBC6 /* lax_der_parsing.c */; };
+		7E4F14AD6BAFC17B8B7760EF6A893441 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4084248BE762637699BC283F5955F /* CCM.swift */; };
+		7E5D888A2B6D6F906191AD6377944A8B /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A6D58AE025E5C4DBA8EE82256BAAA /* MD5.swift */; };
+		7ECD85B9199E56A7BDC23DAA7188105F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4054C5F47200AB77C47FF9594C58DF1 /* Data+Extension.swift */; };
 		81D1821698052C2BEC3FBE48278AE473 /* num_gmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E3740CE91C2DAB6FE5730B91991209 /* num_gmp.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		820DE90A7E3D8F766B1BC2CEFDB74A29 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC12CAEB0783C3D4A72E23ABA5EAB4 /* Padding.swift */; };
 		82A32E847E88B1C4DF3A27F44E6E800B /* scalar_low.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D7B6DB95A18CBB5A7BE01EDB44CAD1F /* scalar_low.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		839539446A85CEAB390EE26AF1CBAFA3 /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BAE844E42528244E496420631F1414 /* BigUInt.swift */; };
+		84783DBCC99C980BDF5ED0712B67AF1F /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C17A005B1C97F7238BC3D3B406784 /* BigInt.swift */; };
+		847DCD8FFCE460D4C95AC7539B93C42A /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D835F9501C4501DEFA77D7E7DEA907 /* GCM.swift */; };
 		85BB3C41A5782367E7942CFBF0D607BB /* num_gmp_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = A225E197A35B8A51BC3333FFA73AB82F /* num_gmp_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		873194A279CF80E41C187F78084E8DD5 /* Words and Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472C61CAA07C4D781AF38173E3362966 /* Words and Bits.swift */; };
+		8747C980A7B906434FCB98996CC73D16 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B568AF566A0C62254E72A54B49C0EF2 /* CipherModeWorker.swift */; };
+		876D2F8EAAA92BB3FDB35CFB466D6153 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3892DC5060DB4ECBD89BC4C88C908 /* Crypto.swift */; };
+		88988CB77D221F489AF9EFDC3D17A73F /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3F5A29869FE8E78EBA16B7B744FF7 /* Division.swift */; };
 		891F44A3B11BADD55E34F2DBADFA729A /* scalar_8x32.h in Headers */ = {isa = PBXBuildFile; fileRef = 99B4F28473737E31262B1BCE7DA10588 /* scalar_8x32.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		894090DE250846BA3C94FD3CAEE9E9CE /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1306770C24D8CD4E87A63DD2D1CE76B /* Exponentiation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8958C13DD939C48BAF5256E2F695961C /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB56B82A99EDADF3798988F2481B0E16 /* AES+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8931399403DD6C4BA5F502682F32347A /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F629D902B83BC10E142199BE777FE052 /* Updatable.swift */; };
+		897C2651D2FA9149C4A1E6ADEDC723E0 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47BE8CCA1796D8FE4281873930715 /* CompactMap.swift */; };
 		89E1998452ADEAF80BFC3B184A7AA6CF /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960D2D9DC22EBDC7D6CBD1141AAB6F4 /* secp256k1.framework */; };
-		8DD4D8EE104A9B6C5C752F41F56D57A3 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C693830E748AA98C97DFCED05CF9B14 /* CBCMAC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		91021DC8B727172E4ABA6F339B79AE97 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9011E643573A8EE25EE9B7B45AEE39 /* UInt8+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E28D04E8BE9FBC4AAD07C1F51B482FB /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4FD9D372F9E160C5210D99C9A04C /* PCBC.swift */; };
+		8ED9B9B75BCA10976C5D91687D71F23F /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F003AB7790ECB8411CE78C10D369F /* Scrypt.swift */; };
+		906A78CF07698367DD560C10CB5F6885 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516634C335364A6BBCFDA675AE91B8CC /* StreamEncryptor.swift */; };
 		9243822569194EAB198F02B43F7B1DAE /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AB5FA5183AC855790EC5822BB3D553 /* CryptoSwift.framework */; };
-		952E927882CBA31F5275C2ECD42B47E6 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030FB18305CC76328CF0C9D1E652C2E /* AES.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		96254DF1BFF7DE295B099784D6E58011 /* main_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 90677E16AA248366AF4ADBAF093D2AA2 /* main_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		96C3E5F4C5FC9D3EEE5A9137530DF08B /* ecmult_const_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E11CF0B551FADBD152A71EC66A226F40 /* ecmult_const_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		97D6B94E8F06DDC58087902BC8AFCCC2 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FBABC467C06417C65D360E2C32199C /* BlockModeOptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9931DBB18913C6D435CE9E2505CC0EF8 /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C17A005B1C97F7238BC3D3B406784 /* BigInt.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		99A67EFDD1DF0BF572B9D64E0B937A39 /* HDNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E70C9F9C29EC1CABD3D870B097D6BF /* HDNode.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9D2CA884836E6D5C38B397B798A35498 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB5B4645C9DA988F9077B323ACF255 /* GCD.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		97F962668645A4303C54FB18292CF187 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DB0EE72BE868D0D42E05B86B7CE10 /* CTR.swift */; };
+		9893AF469566C8DFE2359383D6C3A426 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5BA1F5FACC1659EF5740C51861AEC /* CBC.swift */; };
+		9968E4CC3415BB0DB2B076E4A49CDDCB /* BlockChainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6850A8565003ACD3336CF9ABF417AC /* BlockChainKit-dummy.m */; };
+		9C0A3A864BB8B9DBD7E1B978725BBE19 /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1306770C24D8CD4E87A63DD2D1CE76B /* Exponentiation.swift */; };
+		9C9D884A870ABC76FC15141A70CE98A1 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC744B65E9234D830159AE0C8456764F /* Addition.swift */; };
 		9F144A4D7752702C4E51B050D7B7842F /* ecdsa.h in Headers */ = {isa = PBXBuildFile; fileRef = A24D634AB3AC75CB0A324FAC04AC0D90 /* ecdsa.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A04A6CCD87A5B4D7E01980ABD1B60CD9 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72CE2159CC4D3B794A217364DA5A05 /* Array+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9F59BF3187F9CA1B6A1A46F84FBDEAE4 /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9908725D34DED084DAC96CB5A932BE /* ChaCha20.swift */; };
+		A26699E8D9031CF63070960A4C320336 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57B536D225CD7C4C56564C66CFFBE6 /* String+FoundationExtension.swift */; };
+		A2BB4C3D4D3D17FC903BA241B05348C7 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76BDBC52E9FC7D5697A914433F52CF9 /* Generics.swift */; };
+		A32CD9FC06CEBD6DA8B2A8787F5E95C7 /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCEA9CAB1F5CF944DC66983D8506A8D /* BlockDecryptor.swift */; };
 		A3550C83322265B565A68558AAC3C7AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50742578CF0894244DBC17F35370E1E0 /* Foundation.framework */; };
-		A448322FA9ABD89776CD6DB9EE826FD1 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DB0EE72BE868D0D42E05B86B7CE10 /* CTR.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A630784AF3D14FB55050A5965732A407 /* group_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E093AD1466C4062B67CAA6309CC63A /* group_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A6DEFF938540905603B0AD90D9850518 /* Pods-BlockChainKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC54C5D8B2B6B81AC70CA0E8119E856 /* Pods-BlockChainKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8676E72F6AE199D40CC73E3BD8BC37B /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54DD3AAC748BFA05BB1857B0A5255A /* PBKDF1.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A8EB585A58A4F342645B45B715D80926 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB387455BD1E27D5EA89D9CEDAE5B /* UInt16+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A995D8CD08E082077F2E4B9CDA229C6D /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF5DF1587CCA033489024AAD76551F /* BlockMode.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A9BE31CCAAB91DF82A5355E306E0BF4B /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E0169547EA22F2B842453C12E2567 /* CFB.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AAC60613677512EB633A7FB4160A427D /* Prime Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645D650C85A9046154FA318E900590E /* Prime Test.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A7F71F3732C3A8675B5E720C41DBBC2A /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EDB95C970AE96C756204A1C679846 /* Int+Extension.swift */; };
+		A8F2E2D11D910F21685139230672E091 /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5B91427E2229278455C99D203B68 /* StreamDecryptor.swift */; };
+		A9F0DAAAF3DF2A7AAC9EED1FA1F8A287 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75243FB877C53BBD0D660F0C7039CEA7 /* Cipher.swift */; };
+		AA9B4B4A1FFD2733B39A52DDEAFACFAD /* Floating Point Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646598ACC42E18611DAC8AD50581F95A /* Floating Point Conversion.swift */; };
 		AC0DB7FE88B89DAC0B7087312C08F320 /* eckey.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F2A1ED7B99D5101EC8E12C4E25AD34 /* eckey.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AC7C1B3B792B3BA9BA40339262D12B2F /* BigInt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0CAFF31C51CE018CB577D7AA5A39E9 /* BigInt-dummy.m */; };
 		ACEE41F14DA6BCA229FF93A415686948 /* ecmult_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = AB6E11F21CC3B289B7F1BF0405729EC3 /* ecmult_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AD229C33B79D7E8582FE177CFDE1CAB7 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1645CC0BA96315DB7FC58F22A24BE /* PKCS5.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B1A4315FF6043FD36464FA3ED601E7B7 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4084248BE762637699BC283F5955F /* CCM.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B0FB298151FD7F55A9F2DFCF3A316CD8 /* BigInt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0CAFF31C51CE018CB577D7AA5A39E9 /* BigInt-dummy.m */; };
 		B2CDDE98957972E20EF235EEF1245B00 /* scratch.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D32908BAF62D38F2082576D8A190274 /* scratch.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B2E3969ACC4614A1B9DE0382BB3AABB2 /* BlockChainKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7C75194EF9042213C615437F3324AD /* BlockChainKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B375D0242C536B17E666E883C8ED2CCB /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B2F63967C5E78C41642066DAF34D18 /* SHA2.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B7E0D38FC36AC296DC36151532279B06 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F003AB7790ECB8411CE78C10D369F /* Scrypt.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BB6B2CA6EE8E16BD357ABBD84C0AAC2C /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D3B64FA390C053D85386E2BCB6D017 /* Cryptors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BDBF48E399523DAFE125933263A1E719 /* Words and Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472C61CAA07C4D781AF38173E3362966 /* Words and Bits.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BEE9B4CD0B8161E14C3DAD671F6B73D8 /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCEA9CAB1F5CF944DC66983D8506A8D /* BlockDecryptor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C0724F27C2FE224663201B401F70F699 /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA96215545EB520BBBA0925EF44B79B /* Array+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C19785D97707B90DF6A0ECCBE2D2E91D /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504DAA59C7DB144FF5C93ECC1D481DB /* Codable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B5848DEFA8CB5A57676EA9C62A31E12E /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB5B4645C9DA988F9077B323ACF255 /* GCD.swift */; };
+		B71EA4F6EEDB25EEDD9ADCFDA7BC2E0A /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1EDA458B0E7AA3B8B73D39C43DD69A /* Bitcoin.swift */; };
+		B9C14EA190014BD41F92B73F72B0A7A7 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB7CDC92DA8B3E471A20AC88FD572C /* Digest.swift */; };
+		BA9B46A6082B7FDDE32DE4C06A2B8F1C /* Prime Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645D650C85A9046154FA318E900590E /* Prime Test.swift */; };
+		BAC3D489AEE584175EA5F8B4779A3F7B /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F063BE9B8B977BCA461F492415461E9D /* Strideable.swift */; };
+		BACBAFE3CC204FC96B29102FCDF7A138 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6019203FB4E171774D32B3F8EF3CA /* String+Extension.swift */; };
+		BC5432BA19D15BEC8854C441560CB25C /* secp256k1.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB6EA7F30685F4FF3BDE5A5EF4C026 /* secp256k1.swift-dummy.m */; };
+		BE7906201D8AA3BAD086C6BECFC73E2D /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76033CD602EF46186D7B90F68992E79E /* HMAC.swift */; };
 		C22096B98FF8A6E761D0E9F34DA8B911 /* basic-config.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1CC8A5D378C48E2BD58B6E0ABAF0C7 /* basic-config.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C56C1A7235A5B56BF7EC2AC7413C230D /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416943820A466291FEBEB6AF2808EC4 /* BlockEncryptor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C5E7824CA781223A7F2FB252794BAA5F /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7717FB02AC4219F03137D9B09CFA95 /* UInt128.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C68A5536F0C13498319576440E1E9A4D /* Floating Point Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646598ACC42E18611DAC8AD50581F95A /* Floating Point Conversion.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C6E84E85B0DA8E90223D6157FD2CEA3A /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D3B64FA390C053D85386E2BCB6D017 /* Cryptors.swift */; };
+		C728A3D4A0850D08FD99DF4F205423BF /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B192F30419205125770E0810CA02F /* Bitwise Ops.swift */; };
+		C7B54E646CB4D828FDD57B145B8E38DE /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C285BBE70082819F3FF8E10910AB4B6 /* BlockCipher.swift */; };
+		C7FEC3CC220D20E2366E512658A0FD48 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72CE2159CC4D3B794A217364DA5A05 /* Array+Extension.swift */; };
+		CA4E88644A545939C5CFCEB9A998FDB1 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18C409DD2CA615990EA3694D169429C /* Random.swift */; };
 		CA94EA3B21FFAA418A58787114FA81CA /* lax_der_privatekey_parsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FB7F20AC5C4F0787FC17E7AE9C18D54 /* lax_der_privatekey_parsing.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CB4BF3F7BDEFF6B0B426A45F5B40443B /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9321F2FCDF9C17CC6E337A3151361ABF /* Checksum.swift */; };
 		CEA9EA622AAAF044A6AAF049C879555F /* group.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F70B25821DD21044A54500F2AE6743D /* group.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D05B683DDAADDB89772552877B11072B /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47BE8CCA1796D8FE4281873930715 /* CompactMap.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D08A9237875212C9A0779AD34745F3B2 /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9908725D34DED084DAC96CB5A932BE /* ChaCha20.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D0AE61FDD1E925BDB8511269D1351435 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D835F9501C4501DEFA77D7E7DEA907 /* GCM.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D101481CD9BF945D7CE1AE38056AFEC5 /* secp256k1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5C58C3C8A5B131E1967D9DB30054A /* secp256k1.c */; };
 		D45F1E7C077E1EC14D1BB6985A7F991C /* field_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1581DE5AC01C74492D144CB2781EBD61 /* field_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D584BE9A284FF180FC600C8B67E720DA /* Data Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B271A0EA3A60089640898609A2AF9708 /* Data Conversion.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D59A36612493F73DFA5AFC0EDB3754B4 /* scalar_8x32_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 35519B71ABF82B41DC26A1EFBC1493E5 /* scalar_8x32_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D5EDCC51907DF4538B65E79960734482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50742578CF0894244DBC17F35370E1E0 /* Foundation.framework */; };
-		D8E80BBD1A7BDB98DB1CF06DB2626728 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76BDBC52E9FC7D5697A914433F52CF9 /* Generics.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D9AEA62EDA7C1F916CFB8A795518A6B2 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B568AF566A0C62254E72A54B49C0EF2 /* CipherModeWorker.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DE20E072D572575CA97270B450E96D2B /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC12CAEB0783C3D4A72E23ABA5EAB4 /* Padding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E179F393B859BC07601811F2E0D0FB8F /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5BA1F5FACC1659EF5740C51861AEC /* CBC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E1DC98766848D25D30D0A0DA1EE9D5A0 /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DFE75AFA433FCC3BD1CCCE7CECFD35 /* HKDF.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D949C9B80445D2F5721D838130B61018 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862E4A31FB0EE1488F69FA952DACF85 /* AEAD.swift */; };
+		DD3A32D3DC11099488006E33CA6D37C2 /* Square Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F67103E9596C2F37E38A83F3DB201E /* Square Root.swift */; };
+		DD533E0903B4B1242BE6179FFC803F9C /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60903C1696EF7FA797FD1370156243 /* NoPadding.swift */; };
+		DDE829FC07E4CAB81DFDD2ACCD5F327D /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EEFFFD44A372B2FD845A8CF23C9612 /* Rabbit+Foundation.swift */; };
+		DE9714C86F4252BE022BB50CB4E346D9 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1645CC0BA96315DB7FC58F22A24BE /* PKCS5.swift */; };
 		E23EEDB3EAC7AA4CE25E393473B66DA1 /* ecmult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FD3879A779C690E8B2964A6777F77F2 /* ecmult.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E48514E2D6261C9A503295A8D41855CD /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35576018D95C2D9483345AB6B6172 /* Cryptor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E65150E71EDE5952147B0FE0F2DB6820 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F629D902B83BC10E142199BE777FE052 /* Updatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E2B54FD0D977769E2D9F6A3CC2FD69C4 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD947ECFE083CB1D1CFB0F96DE6E7CB6 /* Rabbit.swift */; };
+		E4EDDF43F18CB1EEFEE5BD87174FD7C5 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB387455BD1E27D5EA89D9CEDAE5B /* UInt16+Extension.swift */; };
 		E6627E40C0F690E187E3FA56DACADEA0 /* ecmult_gen_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = F7BEA7189F579F1B833AA6C692F58506 /* ecmult_gen_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E68B793D2087C6DA6F22DDF159B7497C /* eckey_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 82684599D736920BD7C3FABE95DBDD0A /* eckey_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E6ABBAE095C8586D4C573E0F00D4D41E /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776CF5821ADEB5FBCD724136483DECE /* PKCS7.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E8423B6C098372E16661C0BCD1AB0787 /* BlockChainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6850A8565003ACD3336CF9ABF417AC /* BlockChainKit-dummy.m */; };
-		EC27A4508223C1D9E5BFF77C10C9E8E6 /* Integer Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CAC476D33362125D04F07464C0D5EF /* Integer Conversion.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EC2FD2005F9C92FFF658F686D91F0C3C /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C069BFD5CCB53643A11B7A05532701 /* ZeroPadding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EE9E34BA84FEF8F58186F39901CA8F1D /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BAE844E42528244E496420631F1414 /* BigUInt.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EEA52083CFD962770E1308E83F9D7C7F /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EDB95C970AE96C756204A1C679846 /* Int+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E7807C052F7DFCACD16C8D0F437C570E /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D04C4CB7DF060D0C1CA58139F56464C /* CMAC.swift */; };
+		EB743A309623163083F956C26846783D /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB56B82A99EDADF3798988F2481B0E16 /* AES+Foundation.swift */; };
+		EBD6C96AA50EC4AC38E5CBDEAEA4834C /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13995C5EFA6966E60D0CA166FFF0F24 /* Operators.swift */; };
+		EE1E1C001CFC7BEF11C38708A57E44C5 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F3820510CC5DA3195F0B5299BFAF8 /* DigestType.swift */; };
+		EE8990C3B3F873A1AA6EE990F701B89F /* Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572929ED0CBCE3E87DDB7AE7E6DA600 /* Ethereum.swift */; };
 		EED091E048F12B05A63643A862004974 /* scalar_4x64_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD1FE59D349916F51ED4BDFC73AB147 /* scalar_4x64_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F01D40DDF711BA81F7D70FF0C6D2139B /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516634C335364A6BBCFDA675AE91B8CC /* StreamEncryptor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F0D712104BE15882BBDE9439B829E3DE /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E056ACA80345E37921B1AE3C6C7CB /* HMAC+Foundation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F462E877A3CFF67EA02C046F93F70202 /* lax_der_parsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 125E908E8CACDA1838E6A6DD76E57DC3 /* lax_der_parsing.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F5A96DFC86356E3CF9BAD88423907C9B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97481C267FA32C074034EF14C4C044 /* Utils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F4C18BE4BCFD423AEF52162FB2935931 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA887D258953DE9ED06D479F07B6E13D /* Comparable.swift */; };
 		F67415FDF27D4FD3244312E4B8C6FE8A /* scalar_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 87381E4E9829B51D89EC803FB9162A3B /* scalar_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F69D4266BBB47FBB44F83015EE096DCA /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7055B09338F2F0476F5D288253236C /* PKCS7Padding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F6F6507019880E284604687B22619B3C /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019AF5785A6AF2AEF2D9C6B8A1D67895 /* AEADChaCha20Poly1305.swift */; };
 		F89BE35FE8814394B92E945614325680 /* field_10x26_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2CEBAD96291EEAE85CC828C2F517AB /* field_10x26_impl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F8F9762D1D873A2321356CB56FE7AE64 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D04C4CB7DF060D0C1CA58139F56464C /* CMAC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F9B2D1D9F87DF2AF2A64DC9F9A2D4D0D /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = D17DF7145DC410610555A8A9D5493BAD /* util.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FABB61E9E5CF8F59625F80282E116C72 /* num.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6F0FD6A3E4500061BFB0B794E11C0C /* num.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FD83AB86BDA68E2637FA34AA4E10CE89 /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353B74831C878B9279C6F3F54DD48A9 /* Hashable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FDA35717F7F349148C5EC46D0B3DEE96 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CE6F365BC80E8823F63A4ADC336673 /* RIPEMD160.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD77F2D46BC5D299001FDAC08A6AEFD7 /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC56BE1416936DD5BB91A51BB7D5183 /* Blowfish+Foundation.swift */; };
+		FD8F88D5C9830FAFC7E921D532CB71EF /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D3B84941F5EE77FA5A1BA686AC604 /* OFB.swift */; };
 		FE29DAFB0BF519B6D7CB91EAED73F0FB /* scalar.h in Headers */ = {isa = PBXBuildFile; fileRef = C09C66E11A2D930BF736EC6B9F269250 /* scalar.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FE92922636066F4E1A387562E4C896CC /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3892DC5060DB4ECBD89BC4C88C908 /* Crypto.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FE854E21B38CB1F0FBCB6EFACF89E399 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9011E643573A8EE25EE9B7B45AEE39 /* UInt8+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -981,7 +981,7 @@
 			buildConfigurationList = 99B2ACFC6379488410567F6184C09A27 /* Build configuration list for PBXNativeTarget "BigInt" */;
 			buildPhases = (
 				3689E26F222BA8B7576F40753A77B2E3 /* Headers */,
-				EBD865811063AEA25585CEAA66A3AAF1 /* Sources */,
+				7A6F9AA97336D108669DFAF76BDDB481 /* Sources */,
 				2019D8912E9793859766B93D233FABFD /* Frameworks */,
 				C9B16633D4F6F329EF1E7EF498E3C94E /* Resources */,
 			);
@@ -999,7 +999,7 @@
 			buildConfigurationList = F54792D60365AB3D0A0CDB63FE999929 /* Build configuration list for PBXNativeTarget "secp256k1.swift" */;
 			buildPhases = (
 				F201B89B8CBB54A07C976FB296C15442 /* Headers */,
-				645D9A28AA37A069CE1AF3EE96C82AF6 /* Sources */,
+				D785D3B39F51463BF953EC95EDBF2ABA /* Sources */,
 				FDCCDEE38B73297EEE8005FE67D97780 /* Frameworks */,
 				D35C614DC248AFA1F1BB9C6A935EC4BC /* Resources */,
 			);
@@ -1039,7 +1039,7 @@
 			buildConfigurationList = 011ABA4D53E065953BDB870FD0CC3BEB /* Build configuration list for PBXNativeTarget "BlockChainKit" */;
 			buildPhases = (
 				1CBE9E2150CECAD9D80CEF6C68BF6669 /* Headers */,
-				2D207CE665809B856B93B4C002B6D48C /* Sources */,
+				E2B5E519909227405A76219A570A190B /* Sources */,
 				E8ED789D35A1359354C1502405EEC2CB /* Frameworks */,
 				D2BBBE524828C5FB6A8E45D9E626D596 /* Resources */,
 			);
@@ -1060,7 +1060,7 @@
 			buildConfigurationList = 4E573BDF09E53DDF7334F729EA52F87E /* Build configuration list for PBXNativeTarget "CryptoSwift" */;
 			buildPhases = (
 				5689905108473267045D8C2678821526 /* Headers */,
-				BF71042BE571E27F7429C4400C52CEAB /* Sources */,
+				EDD07A670E5E5AFB7CE683E0FBD6CF37 /* Sources */,
 				04CD240AB731346D4159987351A69D4D /* Frameworks */,
 				1A8E57A89D8099EBECF1516B5B857C4A /* Resources */,
 			);
@@ -1169,29 +1169,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2D207CE665809B856B93B4C002B6D48C /* Sources */ = {
+		7A6F9AA97336D108669DFAF76BDDB481 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327EF39FCDE27B150AD2561056E6AD0A /* Bitcoin.swift in Sources */,
-				E8423B6C098372E16661C0BCD1AB0787 /* BlockChainKit-dummy.m in Sources */,
-				FE92922636066F4E1A387562E4C896CC /* Crypto.swift in Sources */,
-				12F1621F8D20A5435E4870FA10631353 /* Ethereum.swift in Sources */,
-				99A67EFDD1DF0BF572B9D64E0B937A39 /* HDNode.swift in Sources */,
-				458997FA8909E25D118C739BD8081F18 /* Mnemonic.swift in Sources */,
-				FDA35717F7F349148C5EC46D0B3DEE96 /* RIPEMD160.swift in Sources */,
-				13E81A6B3AD13C6677342CCFB8C070BE /* Wordlist.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		645D9A28AA37A069CE1AF3EE96C82AF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A5EF6AEEE2C528537932B62EBF92D39 /* lax_der_parsing.c in Sources */,
-				093610862334E634093760923FEF2D8A /* lax_der_privatekey_parsing.c in Sources */,
-				740F2F27A8206A975CE76381EBFCE49E /* secp256k1.c in Sources */,
-				3029F28BAA92A64530E4068F083BC200 /* secp256k1.swift-dummy.m in Sources */,
+				9C9D884A870ABC76FC15141A70CE98A1 /* Addition.swift in Sources */,
+				B0FB298151FD7F55A9F2DFCF3A316CD8 /* BigInt-dummy.m in Sources */,
+				84783DBCC99C980BDF5ED0712B67AF1F /* BigInt.swift in Sources */,
+				839539446A85CEAB390EE26AF1CBAFA3 /* BigUInt.swift in Sources */,
+				C728A3D4A0850D08FD99DF4F205423BF /* Bitwise Ops.swift in Sources */,
+				64B92A0A26144CBCAD19AA02ABA84FC5 /* Codable.swift in Sources */,
+				F4C18BE4BCFD423AEF52162FB2935931 /* Comparable.swift in Sources */,
+				0962BFEB4F7D3AA6E79E4B9283702A8D /* Data Conversion.swift in Sources */,
+				88988CB77D221F489AF9EFDC3D17A73F /* Division.swift in Sources */,
+				9C0A3A864BB8B9DBD7E1B978725BBE19 /* Exponentiation.swift in Sources */,
+				AA9B4B4A1FFD2733B39A52DDEAFACFAD /* Floating Point Conversion.swift in Sources */,
+				B5848DEFA8CB5A57676EA9C62A31E12E /* GCD.swift in Sources */,
+				466C17F2D923267E359BD43C880809B8 /* Hashable.swift in Sources */,
+				261B7A2985D17C59BA828185C94F2497 /* Integer Conversion.swift in Sources */,
+				2F8904E2AD47367C359F8313B168116B /* Multiplication.swift in Sources */,
+				BA9B46A6082B7FDDE32DE4C06A2B8F1C /* Prime Test.swift in Sources */,
+				CA4E88644A545939C5CFCEB9A998FDB1 /* Random.swift in Sources */,
+				64248720837F9ABEEC124315D63542E5 /* Shifts.swift in Sources */,
+				DD3A32D3DC11099488006E33CA6D37C2 /* Square Root.swift in Sources */,
+				BAC3D489AEE584175EA5F8B4779A3F7B /* Strideable.swift in Sources */,
+				66352C213D90194B0A7C0DC05A54F6F2 /* String Conversion.swift in Sources */,
+				180BD1B2B9B93065636C4CD651E9C35A /* Subtraction.swift in Sources */,
+				873194A279CF80E41C187F78084E8DD5 /* Words and Bits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,89 +1207,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF71042BE571E27F7429C4400C52CEAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52969D375FFC8126D02F38D60909AA56 /* AEAD.swift in Sources */,
-				0B1B8B42CF654309E917FBD79283F485 /* AEADChaCha20Poly1305.swift in Sources */,
-				8958C13DD939C48BAF5256E2F695961C /* AES+Foundation.swift in Sources */,
-				32E3E8EDF5F857E5E6D694C88FEBB881 /* AES.Cryptors.swift in Sources */,
-				952E927882CBA31F5275C2ECD42B47E6 /* AES.swift in Sources */,
-				A04A6CCD87A5B4D7E01980ABD1B60CD9 /* Array+Extension.swift in Sources */,
-				C0724F27C2FE224663201B401F70F699 /* Array+Foundation.swift in Sources */,
-				33143A804E5B97461B0607A5E49EDF1F /* Authenticator.swift in Sources */,
-				146BB2470BAE89B6FBA8F84630CC7002 /* BatchedCollection.swift in Sources */,
-				17C45DD365F085CE8544A49AA193724F /* Bit.swift in Sources */,
-				62D81E9C682607B3908974E849C2863E /* BlockCipher.swift in Sources */,
-				BEE9B4CD0B8161E14C3DAD671F6B73D8 /* BlockDecryptor.swift in Sources */,
-				C56C1A7235A5B56BF7EC2AC7413C230D /* BlockEncryptor.swift in Sources */,
-				A995D8CD08E082077F2E4B9CDA229C6D /* BlockMode.swift in Sources */,
-				97D6B94E8F06DDC58087902BC8AFCCC2 /* BlockModeOptions.swift in Sources */,
-				41663B11ACA6EB3B4285D848A487E4BD /* Blowfish+Foundation.swift in Sources */,
-				6B2B39E0D9043FBC9548D89B1C6450F5 /* Blowfish.swift in Sources */,
-				E179F393B859BC07601811F2E0D0FB8F /* CBC.swift in Sources */,
-				8DD4D8EE104A9B6C5C752F41F56D57A3 /* CBCMAC.swift in Sources */,
-				B1A4315FF6043FD36464FA3ED601E7B7 /* CCM.swift in Sources */,
-				A9BE31CCAAB91DF82A5355E306E0BF4B /* CFB.swift in Sources */,
-				588B6C6E1B36E95CB7F7E621267FA263 /* ChaCha20+Foundation.swift in Sources */,
-				D08A9237875212C9A0779AD34745F3B2 /* ChaCha20.swift in Sources */,
-				1C7A39B3082E756B204F4F8E06FBD615 /* Checksum.swift in Sources */,
-				09596351C510255C321C170B3AA1FAD7 /* Cipher.swift in Sources */,
-				D9AEA62EDA7C1F916CFB8A795518A6B2 /* CipherModeWorker.swift in Sources */,
-				F8F9762D1D873A2321356CB56FE7AE64 /* CMAC.swift in Sources */,
-				3FA405A4B485CC26C641F3348C8A145B /* Collection+Extension.swift in Sources */,
-				D05B683DDAADDB89772552877B11072B /* CompactMap.swift in Sources */,
-				E48514E2D6261C9A503295A8D41855CD /* Cryptor.swift in Sources */,
-				BB6B2CA6EE8E16BD357ABBD84C0AAC2C /* Cryptors.swift in Sources */,
-				78E2D46D665926A48AD68550F2972343 /* CryptoSwift-dummy.m in Sources */,
-				A448322FA9ABD89776CD6DB9EE826FD1 /* CTR.swift in Sources */,
-				77E90D3224684A22394F45B04641D7BF /* Data+Extension.swift in Sources */,
-				42FF87C191E9BA75538DFF9DBA629DCE /* Digest.swift in Sources */,
-				37681D04D3ADE7CEB256253879C9DF1F /* DigestType.swift in Sources */,
-				7AF37D8B573178708C25636A2E6C60EA /* ECB.swift in Sources */,
-				D0AE61FDD1E925BDB8511269D1351435 /* GCM.swift in Sources */,
-				D8E80BBD1A7BDB98DB1CF06DB2626728 /* Generics.swift in Sources */,
-				E1DC98766848D25D30D0A0DA1EE9D5A0 /* HKDF.swift in Sources */,
-				F0D712104BE15882BBDE9439B829E3DE /* HMAC+Foundation.swift in Sources */,
-				44E1BAAEF04CEF9A362D8EA2B5ABA7B7 /* HMAC.swift in Sources */,
-				EEA52083CFD962770E1308E83F9D7C7F /* Int+Extension.swift in Sources */,
-				393193DB40F2C522B84FE6F9229FDFB2 /* MD5.swift in Sources */,
-				79812831E72DEB4C75C61BC0127BBFD1 /* NoPadding.swift in Sources */,
-				45B1F945CC021439C40DE1DEBE4F8454 /* OFB.swift in Sources */,
-				5CEA44EC0EEE7E5047FBE4A356C3F2D7 /* Operators.swift in Sources */,
-				DE20E072D572575CA97270B450E96D2B /* Padding.swift in Sources */,
-				A8676E72F6AE199D40CC73E3BD8BC37B /* PBKDF1.swift in Sources */,
-				29EA9FE046999317A017F16A24B42FD7 /* PBKDF2.swift in Sources */,
-				7E53D1C71FE760E9D81731B7E9E7AABF /* PCBC.swift in Sources */,
-				AD229C33B79D7E8582FE177CFDE1CAB7 /* PKCS5.swift in Sources */,
-				E6ABBAE095C8586D4C573E0F00D4D41E /* PKCS7.swift in Sources */,
-				F69D4266BBB47FBB44F83015EE096DCA /* PKCS7Padding.swift in Sources */,
-				6376DD098DEB963533D3A7E399B904AE /* Poly1305.swift in Sources */,
-				3C671255F835B02D25E01597DC8CC6A5 /* Rabbit+Foundation.swift in Sources */,
-				0E2255A092502FE9DC45E53095D595A9 /* Rabbit.swift in Sources */,
-				23EC701410C82BE092CB9DAD247DC82D /* RandomBytesSequence.swift in Sources */,
-				B7E0D38FC36AC296DC36151532279B06 /* Scrypt.swift in Sources */,
-				15080445EEDD7951FC2EEE401321C6C2 /* SecureBytes.swift in Sources */,
-				079CE062380912DF3CA20A0C49E17079 /* SHA1.swift in Sources */,
-				B375D0242C536B17E666E883C8ED2CCB /* SHA2.swift in Sources */,
-				0C7D928FC7D1A7B6AFE5AFFB3C372E5D /* SHA3.swift in Sources */,
-				2E5B69B2E37608EB162672DDAEEDD8DF /* StreamDecryptor.swift in Sources */,
-				F01D40DDF711BA81F7D70FF0C6D2139B /* StreamEncryptor.swift in Sources */,
-				4A7A454C6667C4AE195017A5F0E86606 /* String+Extension.swift in Sources */,
-				2A23BED218621EBCA1D34CB9E42D84D1 /* String+FoundationExtension.swift in Sources */,
-				C5E7824CA781223A7F2FB252794BAA5F /* UInt128.swift in Sources */,
-				A8EB585A58A4F342645B45B715D80926 /* UInt16+Extension.swift in Sources */,
-				03195F56D47AB4E920CCA24F8628B0F9 /* UInt32+Extension.swift in Sources */,
-				69742C9FF1C3A705A75B78700DA81AAF /* UInt64+Extension.swift in Sources */,
-				91021DC8B727172E4ABA6F339B79AE97 /* UInt8+Extension.swift in Sources */,
-				E65150E71EDE5952147B0FE0F2DB6820 /* Updatable.swift in Sources */,
-				30E0A9CC821C22E212DFE63484777DBC /* Utils+Foundation.swift in Sources */,
-				F5A96DFC86356E3CF9BAD88423907C9B /* Utils.swift in Sources */,
-				EC2FD2005F9C92FFF658F686D91F0C3C /* ZeroPadding.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C47709F4ED82113B3BD4970713C7D817 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1294,33 +1215,112 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EBD865811063AEA25585CEAA66A3AAF1 /* Sources */ = {
+		D785D3B39F51463BF953EC95EDBF2ABA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB1BB5D9886158D9064364722866BBC /* Addition.swift in Sources */,
-				AC7C1B3B792B3BA9BA40339262D12B2F /* BigInt-dummy.m in Sources */,
-				9931DBB18913C6D435CE9E2505CC0EF8 /* BigInt.swift in Sources */,
-				EE9E34BA84FEF8F58186F39901CA8F1D /* BigUInt.swift in Sources */,
-				28D037F1749DF0DF20FC0369F9269544 /* Bitwise Ops.swift in Sources */,
-				C19785D97707B90DF6A0ECCBE2D2E91D /* Codable.swift in Sources */,
-				556069F7A82BC6C05D2CDFAB4F9F2FCD /* Comparable.swift in Sources */,
-				D584BE9A284FF180FC600C8B67E720DA /* Data Conversion.swift in Sources */,
-				2A3BFF0A2E7CFB1B2ED94351D41D4ED0 /* Division.swift in Sources */,
-				894090DE250846BA3C94FD3CAEE9E9CE /* Exponentiation.swift in Sources */,
-				C68A5536F0C13498319576440E1E9A4D /* Floating Point Conversion.swift in Sources */,
-				9D2CA884836E6D5C38B397B798A35498 /* GCD.swift in Sources */,
-				FD83AB86BDA68E2637FA34AA4E10CE89 /* Hashable.swift in Sources */,
-				EC27A4508223C1D9E5BFF77C10C9E8E6 /* Integer Conversion.swift in Sources */,
-				4EC4E10E9B5F7F0D83A760D7C2F4116F /* Multiplication.swift in Sources */,
-				AAC60613677512EB633A7FB4160A427D /* Prime Test.swift in Sources */,
-				64472258796A021331078734022FC56C /* Random.swift in Sources */,
-				53F45CD9D1191DD621FCF7DF594B5A66 /* Shifts.swift in Sources */,
-				7FEE174B9B87D947925EEA0D465ABDF9 /* Square Root.swift in Sources */,
-				06A0B987CD6BD684E1693FE4145AF91D /* Strideable.swift in Sources */,
-				10C6361D801E133D5F5069BC1120B398 /* String Conversion.swift in Sources */,
-				40FF499C4DE7F7A954D05EEB43B3FEF0 /* Subtraction.swift in Sources */,
-				BDBF48E399523DAFE125933263A1E719 /* Words and Bits.swift in Sources */,
+				7C6EE5C9505CF3C31BB3DE0876C53286 /* lax_der_parsing.c in Sources */,
+				5E189B45F11D4A78C2704105AAD1C49D /* lax_der_privatekey_parsing.c in Sources */,
+				D101481CD9BF945D7CE1AE38056AFEC5 /* secp256k1.c in Sources */,
+				BC5432BA19D15BEC8854C441560CB25C /* secp256k1.swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B5E519909227405A76219A570A190B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71EA4F6EEDB25EEDD9ADCFDA7BC2E0A /* Bitcoin.swift in Sources */,
+				9968E4CC3415BB0DB2B076E4A49CDDCB /* BlockChainKit-dummy.m in Sources */,
+				876D2F8EAAA92BB3FDB35CFB466D6153 /* Crypto.swift in Sources */,
+				EE8990C3B3F873A1AA6EE990F701B89F /* Ethereum.swift in Sources */,
+				216146AE3598B7299B4A0F1B6B3E5C9A /* HDNode.swift in Sources */,
+				0EB4AC5E75A83192DABEBDEA9B193515 /* Mnemonic.swift in Sources */,
+				5495EC05F4E8F4DBAA3110FC72C681D4 /* RIPEMD160.swift in Sources */,
+				0264ED1E4E3EA6F5148F75F01915BD22 /* Wordlist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD07A670E5E5AFB7CE683E0FBD6CF37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D949C9B80445D2F5721D838130B61018 /* AEAD.swift in Sources */,
+				F6F6507019880E284604687B22619B3C /* AEADChaCha20Poly1305.swift in Sources */,
+				EB743A309623163083F956C26846783D /* AES+Foundation.swift in Sources */,
+				4A9716DE2F321D0011E75FD6CA5D04B0 /* AES.Cryptors.swift in Sources */,
+				3CA65A6BE1824B4CF01E1EFCAB312E66 /* AES.swift in Sources */,
+				C7FEC3CC220D20E2366E512658A0FD48 /* Array+Extension.swift in Sources */,
+				642C9144BA7A7F6EF6129D13345F6B57 /* Array+Foundation.swift in Sources */,
+				694620A872B341A73F491F185F9670EC /* Authenticator.swift in Sources */,
+				66AE307A670865D01F773934A8DB87FE /* BatchedCollection.swift in Sources */,
+				4A011473FAE50E57FD343A9ABFB82BFA /* Bit.swift in Sources */,
+				C7B54E646CB4D828FDD57B145B8E38DE /* BlockCipher.swift in Sources */,
+				A32CD9FC06CEBD6DA8B2A8787F5E95C7 /* BlockDecryptor.swift in Sources */,
+				5E8FA545B8F78A3B99BBA9DB6A231191 /* BlockEncryptor.swift in Sources */,
+				145E4C65C0B40F4E72A55A60C09476B4 /* BlockMode.swift in Sources */,
+				3BF118D86DC8AD16F7BD06C394166C13 /* BlockModeOptions.swift in Sources */,
+				FD77F2D46BC5D299001FDAC08A6AEFD7 /* Blowfish+Foundation.swift in Sources */,
+				28B4A7C0AF0958972A2B8DA00AAD0F3A /* Blowfish.swift in Sources */,
+				9893AF469566C8DFE2359383D6C3A426 /* CBC.swift in Sources */,
+				078CA673C7593084366AE576603F2791 /* CBCMAC.swift in Sources */,
+				7E4F14AD6BAFC17B8B7760EF6A893441 /* CCM.swift in Sources */,
+				00BCA4CECB5013CFE72E481EBC0D842A /* CFB.swift in Sources */,
+				465098B1887CDB51199EF388223AD673 /* ChaCha20+Foundation.swift in Sources */,
+				9F59BF3187F9CA1B6A1A46F84FBDEAE4 /* ChaCha20.swift in Sources */,
+				CB4BF3F7BDEFF6B0B426A45F5B40443B /* Checksum.swift in Sources */,
+				A9F0DAAAF3DF2A7AAC9EED1FA1F8A287 /* Cipher.swift in Sources */,
+				8747C980A7B906434FCB98996CC73D16 /* CipherModeWorker.swift in Sources */,
+				E7807C052F7DFCACD16C8D0F437C570E /* CMAC.swift in Sources */,
+				20A426ACF81B1A344DFA92205FA288C2 /* Collection+Extension.swift in Sources */,
+				897C2651D2FA9149C4A1E6ADEDC723E0 /* CompactMap.swift in Sources */,
+				1FA1A3C8C90C1CB21D2C238850E45788 /* Cryptor.swift in Sources */,
+				C6E84E85B0DA8E90223D6157FD2CEA3A /* Cryptors.swift in Sources */,
+				78CB7E9DE4B292D3350AC36226590197 /* CryptoSwift-dummy.m in Sources */,
+				97F962668645A4303C54FB18292CF187 /* CTR.swift in Sources */,
+				7ECD85B9199E56A7BDC23DAA7188105F /* Data+Extension.swift in Sources */,
+				B9C14EA190014BD41F92B73F72B0A7A7 /* Digest.swift in Sources */,
+				EE1E1C001CFC7BEF11C38708A57E44C5 /* DigestType.swift in Sources */,
+				1573EC0257E2FB186A5628A9F6963203 /* ECB.swift in Sources */,
+				847DCD8FFCE460D4C95AC7539B93C42A /* GCM.swift in Sources */,
+				A2BB4C3D4D3D17FC903BA241B05348C7 /* Generics.swift in Sources */,
+				49CFC02DEB31FC1A31DB9BE4990DE8C9 /* HKDF.swift in Sources */,
+				397E6A8338CEC657DC73A6579D46A652 /* HMAC+Foundation.swift in Sources */,
+				BE7906201D8AA3BAD086C6BECFC73E2D /* HMAC.swift in Sources */,
+				A7F71F3732C3A8675B5E720C41DBBC2A /* Int+Extension.swift in Sources */,
+				7E5D888A2B6D6F906191AD6377944A8B /* MD5.swift in Sources */,
+				DD533E0903B4B1242BE6179FFC803F9C /* NoPadding.swift in Sources */,
+				FD8F88D5C9830FAFC7E921D532CB71EF /* OFB.swift in Sources */,
+				EBD6C96AA50EC4AC38E5CBDEAEA4834C /* Operators.swift in Sources */,
+				820DE90A7E3D8F766B1BC2CEFDB74A29 /* Padding.swift in Sources */,
+				3654267FFDE8F2AF94C69B50B5232F64 /* PBKDF1.swift in Sources */,
+				0F04F33238007B9A37D7C9B34530758B /* PBKDF2.swift in Sources */,
+				8E28D04E8BE9FBC4AAD07C1F51B482FB /* PCBC.swift in Sources */,
+				DE9714C86F4252BE022BB50CB4E346D9 /* PKCS5.swift in Sources */,
+				3E0F0F2CB7D29E0F4C9CAC1386079D98 /* PKCS7.swift in Sources */,
+				0F15E6C5A4332CD0BCDBCE05B6D24AAD /* PKCS7Padding.swift in Sources */,
+				6BEBD368B77785EDE9EF8514E18CAC0A /* Poly1305.swift in Sources */,
+				DDE829FC07E4CAB81DFDD2ACCD5F327D /* Rabbit+Foundation.swift in Sources */,
+				E2B54FD0D977769E2D9F6A3CC2FD69C4 /* Rabbit.swift in Sources */,
+				4E0943A289787B0C5D34BD24EB8ED461 /* RandomBytesSequence.swift in Sources */,
+				8ED9B9B75BCA10976C5D91687D71F23F /* Scrypt.swift in Sources */,
+				5CB7CE7F04FFCA2EBE605C8AC878CE99 /* SecureBytes.swift in Sources */,
+				30E122C455651F0658C2B54717C37A8C /* SHA1.swift in Sources */,
+				42203386B9BC18AE01BA0B992706428C /* SHA2.swift in Sources */,
+				61AC9AB582D1BCB201F8D048CC51890E /* SHA3.swift in Sources */,
+				A8F2E2D11D910F21685139230672E091 /* StreamDecryptor.swift in Sources */,
+				906A78CF07698367DD560C10CB5F6885 /* StreamEncryptor.swift in Sources */,
+				BACBAFE3CC204FC96B29102FCDF7A138 /* String+Extension.swift in Sources */,
+				A26699E8D9031CF63070960A4C320336 /* String+FoundationExtension.swift in Sources */,
+				725EC2E3FA6D40BBB0EDBB964ECB87D7 /* UInt128.swift in Sources */,
+				E4EDDF43F18CB1EEFEE5BD87174FD7C5 /* UInt16+Extension.swift in Sources */,
+				3470D2410F379B0EE8CCC39791A8632C /* UInt32+Extension.swift in Sources */,
+				488796B370E8CC51EB1982B7A747B59F /* UInt64+Extension.swift in Sources */,
+				FE854E21B38CB1F0FBCB6EFACF89E399 /* UInt8+Extension.swift in Sources */,
+				8931399403DD6C4BA5F502682F32347A /* Updatable.swift in Sources */,
+				22E1C75F96AB1E648F25E572CEE9AC7F /* Utils+Foundation.swift in Sources */,
+				369B45FF9AB5F44DA6012EE032356330 /* Utils.swift in Sources */,
+				310AE1B77DB6668A93D89B907238D8C7 /* ZeroPadding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

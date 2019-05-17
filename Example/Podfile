@@ -1,6 +1,5 @@
 platform :ios, '11.0'
 use_frameworks!
-inhibit_all_warnings!
 
 target 'BlockChainKit_Example' do
   pod 'BlockChainKit', :path => '../'

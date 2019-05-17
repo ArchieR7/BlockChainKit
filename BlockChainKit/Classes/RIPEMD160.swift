@@ -317,7 +317,7 @@ public struct RIPEMD160 {
             let amount = 64 - buffer.count
             buffer.append(data[..<amount])
             X.withUnsafeMutableBytes {
-                _ = buffer.copyBytes(to: $0)
+                _ = buffer.copyBytes(to: $0.bindMemory(to: UInt8.self))
             }
             compress(X)
             pos += amount
@@ -368,13 +368,13 @@ public struct RIPEMD160 {
 
 public extension RIPEMD160 {
 
-    static func hash(message: Data) -> Data {
+    static func hash(_ message: Data) -> Data {
         var md = RIPEMD160()
         md.update(data: message)
         return md.finalize()
     }
 
-    static func hash(message: String) -> Data {
-        return RIPEMD160.hash(message: message.data(using: .utf8)!)
+    static func hash(_ message: String) -> Data {
+        return RIPEMD160.hash(message.data(using: .utf8)!)
     }
 }
