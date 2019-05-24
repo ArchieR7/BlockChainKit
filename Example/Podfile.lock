@@ -1,6 +1,6 @@
 PODS:
   - BigInt (4.0.0)
-  - BlockChainKit (1.0.0):
+  - BlockChainKit (1.1.0):
     - BigInt (~> 4.0.0)
     - CryptoSwift (~> 1.0.0)
     - secp256k1.swift (~> 0.1.4)
@@ -22,10 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BigInt: 2aad1a9942dc932ec8b84290d2c564a3d76f97ab
-  BlockChainKit: f63e9b582335bac06c0bec857a52fa8718725a59
+  BlockChainKit: fc40a10063da2cb62babc110ab8113e971395283
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
 
-PODFILE CHECKSUM: f14948c2b8ecb1ec5ec15103a0c3e92b7e939a7b
+PODFILE CHECKSUM: a37f9f1b868807edf1cfa3733a092381980e0b18
 
-COCOAPODS: 1.7.0.rc.1
+COCOAPODS: 1.6.1
