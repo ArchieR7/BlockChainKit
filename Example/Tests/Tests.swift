@@ -156,6 +156,35 @@ xpub6Eh5FLJnjDpAA4xWZEZtpYm6gnMon1Ar7oeiWk3qLTNR22UFkEdGWLfHpcTWBHYUGnfEjXAfdaTm
         let BTCAddress = "1gBMhAqrL3y1imMdEWbLN9PxjFo1bqNEE"
         XCTAssertEqual(BTCAddress, Bitcoin.address(privateKey: BTCPrivateKey)!)
     }
+
+    func testRLP() {
+        XCTAssertEqual(try! RLP.encode("dog").toHexString(), "83646f67")
+    }
+
+    func testETHSignature() {
+        let privateKey = "e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109"
+        let privateKeyData = Data(hex: privateKey)
+        let rawTransaction = Ethereum.RawTransaction(nonce: "0x6e",
+                                                     gasPrice: "0x040000000000",
+                                                     gasLimit: "0x060000",
+                                                     toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
+                                                     value: "0x015950000000000000000000",
+                                                     data: "")
+        let mainnet = """
+f8726e86040000000000830600009485b7ca161c311d9a5f0077d5048cadface89a2678c01595000000000000000000080
+25
+a028c0f73a9c767bdce910c841ebdd58411694ddf8594441efd63d87ecb34a2105
+a074be5b9687e18b5ca9e79a46ab989ff0bc597bc2ca3c38ffe9b491125f3283ca
+""".replacingOccurrences(of: "\n", with: String())
+        let defaultValue = """
+f8726e86040000000000830600009485b7ca161c311d9a5f0077d5048cadface89a2678c01595000000000000000000080
+1b
+a03a17139284e3be77d1387093079684b28d8c6096837d516f124110e03ce3cb3a
+a03230af37a970f1d4f85e7707c768ebd049ea5b4cf52d10cc524a2e26aea38998
+""".replacingOccurrences(of: "\n", with: String())
+        XCTAssertEqual(mainnet, try! rawTransaction.sign(privateKey: privateKeyData, chainID: .mainnet).toHexString())
+        XCTAssertEqual(defaultValue, try! rawTransaction.sign(privateKey: privateKeyData, chainID: .zero).toHexString())
+    }
 }
 
 extension Tests {

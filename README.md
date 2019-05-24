@@ -99,14 +99,28 @@ let address = Ethereum.address(privateKey: privateKey)
 let address = Bitcoin.address(privateKey: privateKey)
 ```
 
+### Create ETH transaction
+```swift
+let rawTransaction = Ethereum.RawTransaction(nonce: "0x6e",
+                                             gasPrice: "0x040000000000",
+                                             gasLimit: "0x060000",
+                                             toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
+                                             value: "0x015950000000000000000000",
+                                             data: "")
+// chainID supports zero, mainnet = 1, morden = 2, ropsten = 3, rinkeby = 4, goerli = 5, kovan = 42
+// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md
+//
+try rawTransaction.sign(privateKey: privateKeyData, chainID: .mainnet)
+```
+
 ## Feature
 
 - [x] BIP32
 - [x] BIP39
 - [x] BIP44
 - [x] BIP55
+- [x] signature for ETH transaction
 - [ ] signature for BTC transaction
-- [ ] signature for ETH transaction
 
 ## Requirements
 
@@ -120,7 +134,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.0.0'
+pod 'BlockChainKit', '~> 1.1.0'
 ```
 
 ## Author

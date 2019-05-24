@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BlockChainKit'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = '💰A blockchain toolkit with Swift.'
 
 # This description is used to generate tags and improve search results.
