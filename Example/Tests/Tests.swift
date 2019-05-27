@@ -168,8 +168,7 @@ xpub6Eh5FLJnjDpAA4xWZEZtpYm6gnMon1Ar7oeiWk3qLTNR22UFkEdGWLfHpcTWBHYUGnfEjXAfdaTm
                                                      gasPrice: "0x040000000000",
                                                      gasLimit: "0x060000",
                                                      toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
-                                                     value: "0x015950000000000000000000",
-                                                     data: "")
+                                                     value: "0x015950000000000000000000")
         let mainnet = """
 f8726e86040000000000830600009485b7ca161c311d9a5f0077d5048cadface89a2678c01595000000000000000000080
 25
@@ -182,8 +181,30 @@ f8726e86040000000000830600009485b7ca161c311d9a5f0077d5048cadface89a2678c01595000
 a03a17139284e3be77d1387093079684b28d8c6096837d516f124110e03ce3cb3a
 a03230af37a970f1d4f85e7707c768ebd049ea5b4cf52d10cc524a2e26aea38998
 """.replacingOccurrences(of: "\n", with: String())
+        let defaultERC20 = """
+f8ab6e860400000000008306000094b8c77482e45f1f44de1745f52c74426c631bdd52
+80
+b844a9059cbb
+00000000000000000000000085b7ca161c311d9a5f0077d5048cadface89a267
+0000000000000000000000000000000000000000015950000000000000000000
+1c
+a03677e9b261db83d81f6e50e8b37b59b3750b193ceed0fbc6488c10df077aca99
+a05535d28c1487a531788ee59547a4085c8b8593f4e4f477954059ac87b3d717b2
+""".replacingOccurrences(of: "\n", with: String())
         XCTAssertEqual(mainnet, try! rawTransaction.sign(privateKey: privateKeyData, chainID: .mainnet).toHexString())
         XCTAssertEqual(defaultValue, try! rawTransaction.sign(privateKey: privateKeyData, chainID: .zero).toHexString())
+        let ERC20Transaction = Ethereum.RawTransaction(nonce: "0x6e",
+                                                       gasPrice: "0x040000000000",
+                                                       gasLimit: "0x060000",
+                                                       toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
+                                                       value: "0x015950000000000000000000",
+                                                       contract: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52")
+        XCTAssertEqual(defaultERC20,
+                       try! ERC20Transaction.sign(privateKey: privateKeyData, chainID: .zero).toHexString())
+    }
+
+    func testPadding() {
+        print("015950000000000000000000".paddingLeft(size: 64))
     }
 }
 

@@ -6,7 +6,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/BlockChainKit.svg?style=flat)](https://cocoapods.org/pods/BlockChainKit)
 
 ## 🔏 BlockChainKit 🔏
-The BlockChainKit is a Swift library provides mnemonic generation and validation with 8 languages, and it implements `NSLinguisticTagger` to detect mnemonic language automatically that you do not need to set language 🌍.
+The BlockChainKit is a Swift library provides mnemonic generation and validation with 8 languages (🇹🇼🇺🇸🇪🇸🇯🇵🇰🇷🇫🇷🇮🇹🇨🇳), 
+and it implements `NSLinguisticTagger` to detect mnemonic language automatically that you do not need to set language 🌍.
+
+There is also providing function to create a raw transaction with `Ethereum.RawTransaction` both of Ethereum and ERC-20 tokens,
+`.sign(privateKey: Data, chainID: Int)` is working well 💪.
 
 ## Usage
 
@@ -111,6 +115,17 @@ let rawTransaction = Ethereum.RawTransaction(nonce: "0x6e",
 // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md
 //
 try rawTransaction.sign(privateKey: privateKeyData, chainID: .mainnet)
+
+// Create a BNB
+// contract: 0xB8c77482e45F1F44dE1745F52C74426C631bDD52
+let ERC20Transaction = Ethereum.RawTransaction(nonce: "0x6e",
+                                               gasPrice: "0x040000000000",
+                                               gasLimit: "0x060000",
+                                               toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
+                                               value: "0x015950000000000000000000",
+                                               contract: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52")
+                                               
+try ERC20Transaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 ```
 
 ## Feature
@@ -120,6 +135,7 @@ try rawTransaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 - [x] BIP44
 - [x] BIP55
 - [x] signature for ETH transaction
+- [x] signature for ETH ERC-20 transaction
 - [ ] signature for BTC transaction
 
 ## Requirements
@@ -134,7 +150,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.1.0'
+pod 'BlockChainKit', '~> 1.2.0'
 ```
 
 ## Author

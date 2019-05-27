@@ -44,13 +44,26 @@ public extension Ethereum {
     struct RawTransaction {
         let nonce, gasPrice, gasLimit, toAddress, value, data: String
 
-        public init(nonce: String, gasPrice: String, gasLimit: String, toAddress: String, value: String, data: String) {
+        public init(nonce: String,
+                    gasPrice: String,
+                    gasLimit: String,
+                    toAddress: String,
+                    value: String,
+                    contract: String? = nil) {
             self.nonce = nonce
             self.gasPrice = gasPrice
             self.gasLimit = gasLimit
-            self.toAddress = toAddress
-            self.value = value
-            self.data = data
+            if let contract = contract {
+                self.toAddress = contract
+                let address = toAddress.replacingOccurrences(of: "0x", with: String())
+                let amount = value.replacingOccurrences(of: "0x", with: String()).paddingLeft(size: 64)
+                self.data = "a9059cbb000000000000000000000000" + address + amount
+                self.value = String()
+            } else {
+                self.value = value
+                self.toAddress = toAddress
+                self.data = String()
+            }
         }
 
         func encode(chainID: ChainID = .mainnet) throws -> Data {
@@ -58,7 +71,7 @@ public extension Ethereum {
                               Data(hex: gasPrice),
                               Data(hex: gasLimit),
                               Data(hex: toAddress),
-                              Data(hex: value),
+                              value.isEmpty ? Data([]) : Data(hex: value),
                               Data(hex: data)]
             if chainID.rawValue > 0 {
                 encodeData.append(contentsOf:[Data([UInt8(chainID.rawValue)]), Data([]), Data([])])
@@ -95,5 +108,11 @@ public extension Ethereum {
             secp256k1_context_destroy(context)
             return try RLP.encode(nestedArrayOfData: encodeData)
         }
+    }
+}
+
+public extension String {
+    func paddingLeft(size: Int) -> String {
+        return Array(repeating: "0", count: size - count).joined() + self
     }
 }
