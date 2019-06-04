@@ -12,6 +12,13 @@ and it implements `NSLinguisticTagger` to detect mnemonic language automatically
 There is also providing function to create a raw transaction with `Ethereum.RawTransaction` both of Ethereum and ERC-20 tokens,
 `.sign(privateKey: Data, chainID: Int)` is working well 💪.
 
+#### 2019-06-04
+Supports Bitcoin to sign transaction with 
+- from and to address
+- WIF of private key
+- unspent transactions
+- amount
+
 ## Usage
 
 ### Create mnemonic
@@ -128,6 +135,16 @@ let ERC20Transaction = Ethereum.RawTransaction(nonce: "0x6e",
 try ERC20Transaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 ```
 
+### Create BTC transaction
+```swift
+// sign with from address, to address, amount, uxtos and wif of private key
+let rawTransaction = try Bitcoin.sign(from: fromAddress,
+                                      to: toAddress,
+                                      amount: amount,
+                                      unspentTransactions: uxtos,
+                                      wif: wif)
+```
+
 ## Feature
 
 - [x] BIP32
@@ -136,7 +153,7 @@ try ERC20Transaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 - [x] BIP55
 - [x] signature for ETH transaction
 - [x] signature for ETH ERC-20 transaction
-- [ ] signature for BTC transaction
+- [x] signature for BTC transaction
 
 ## Requirements
 
@@ -150,12 +167,17 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.2.0'
+pod 'BlockChainKit', '~> 1.3.0'
 ```
 
 ## Author
 
 [Archie](https://twitter.com/ChangArchie), Archie@Archie.tw
+
+## Donation
+
+- Bitcoin address - `1GxDDqxBWUfAEgkWiPv2fJowB54gPMnrQr`
+- Ethereum address - `0x85b7ca161C311d9A5f0077d5048CAdFace89a267`
 
 ## License
 

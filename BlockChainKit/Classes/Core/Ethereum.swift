@@ -7,13 +7,18 @@
 
 import BigInt
 import CryptoSwift
-import secp256k1
+import func secp256k1Converter.secp256k1_context_create
+import func secp256k1Converter.secp256k1_ecdsa_recoverable_signature
+import func secp256k1Converter.secp256k1_ecdsa_sign_recoverable
+import func secp256k1Converter.secp256k1_ecdsa_recoverable_signature_serialize_compact
+import func secp256k1Converter.secp256k1_context_destroy
+import var secp256k1Converter.SECP256K1_CONTEXT_SIGN
 
 public enum Ethereum {
     public static func address(privateKey: String) -> String {
-        let privateKeyData = Data(hex: privateKey)
+        let privateKeyData = Data(Array<UInt8>(hex: privateKey))
         let publicKeyData = HDNode.publicKey(privateKey: privateKeyData, isCompressed: false)
-        let formattedData = (Data(hex: "0x") + publicKeyData).dropFirst()
+        let formattedData = publicKeyData.dropFirst()
         let addressData = Data(SHA3(variant: .keccak256).calculate(for: formattedData.bytes)).suffix(20)
         return "0x" + EIP55(addressData)
     }

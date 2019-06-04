@@ -1,0 +1,6 @@
+framework module secp256k1Converter {
+  umbrella header "secp256k1Converter-umbrella.h"
+
+  export *
+  module * { export * }
+}
