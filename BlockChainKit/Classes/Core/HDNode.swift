@@ -7,14 +7,6 @@
 
 import BigInt
 import CryptoSwift
-import func secp256k1Converter.secp256k1_context_create
-import func secp256k1Converter.secp256k1_ecdsa_recoverable_signature
-import func secp256k1Converter.secp256k1_ecdsa_sign_recoverable
-import func secp256k1Converter.secp256k1_ecdsa_recoverable_signature_serialize_compact
-import func secp256k1Converter.secp256k1_context_destroy
-import func secp256k1Converter.secp256k1_pubkey
-import func secp256k1Converter.secp256k1_ec_pubkey_create
-import var secp256k1Converter.SECP256K1_CONTEXT_SIGN
 import secp256k1
 
 public struct HDNode {
@@ -88,13 +80,13 @@ public struct HDNode {
     }
 
     public static func publicKey(privateKey: Data, isCompressed: Bool = true) -> Data {
-        guard let context = secp256k1Converter.secp256k1_context_create(UInt32(SECP256K1_CONTEXT_SIGN)) else {
+        guard let context = secp256k1_context_create(UInt32(SECP256K1_CONTEXT_SIGN)) else {
             fatalError("secp256k1 context")
         }
         let privateKeyBytes = privateKey.bytes
-        var publicKey = secp256k1Converter.secp256k1_pubkey()
+        var publicKey = secp256k1_pubkey()
 
-        guard secp256k1Converter.secp256k1_ec_pubkey_create(context, &publicKey, privateKeyBytes) == 1 else {
+        guard secp256k1_ec_pubkey_create(context, &publicKey, privateKeyBytes) == 1 else {
             fatalError("secp256k1 ec public key create")
         }
         let size = isCompressed ? 33 : 65
@@ -171,11 +163,38 @@ public enum DerivationNode {
     }
 }
 
+extension UInt64 {
+    var UInt8ArrayLE: [UInt8] {
+        return [0, 8, 16, 24, 32, 40, 48, 56].map { UInt8(self >> $0 & 0x00000000000000FF) }
+    }
+    var UInt8ArrayBE: [UInt8] {
+        return [56, 48, 40, 32, 24, 16, 8, 0].map { UInt8(self >> $0 & 0x00000000000000FF) }
+    }
+}
+
 extension UInt32 {
     var UInt8ArrayLE: [UInt8] {
         return [0, 8, 16, 24].map { UInt8(self >> $0 & 0x000000FF) }
     }
     var UInt8ArrayBE: [UInt8] {
         return [24, 16, 8, 0].map { UInt8(self >> $0 & 0x000000FF) }
+    }
+}
+
+extension UInt16 {
+    var UInt8ArrayLE: [UInt8] {
+        return [0, 8].map { UInt8(self >> $0 & 0x00FF) }
+    }
+    var UInt8ArrayBE: [UInt8] {
+        return [8, 0].map { UInt8(self >> $0 & 0x00FF) }
+    }
+}
+
+extension Int64 {
+    var UInt8ArrayLE: [UInt8] {
+        return [0, 8, 16, 24, 32, 40, 48, 56].map { UInt8(self >> $0 & 0x00000000000000FF) }
+    }
+    var UInt8ArrayBE: [UInt8] {
+        return [56, 48, 40, 32, 24, 16, 8, 0].map { UInt8(self >> $0 & 0x00000000000000FF) }
     }
 }

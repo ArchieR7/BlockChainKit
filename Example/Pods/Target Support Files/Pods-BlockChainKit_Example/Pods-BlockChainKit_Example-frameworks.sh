@@ -162,19 +162,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/BitcoinKit/BitcoinKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BlockChainKit/BlockChainKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/secp256k1Converter/secp256k1Converter.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/BitcoinKit/BitcoinKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BlockChainKit/BlockChainKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/secp256k1Converter/secp256k1Converter.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

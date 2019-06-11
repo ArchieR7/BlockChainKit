@@ -7,12 +7,7 @@
 
 import BigInt
 import CryptoSwift
-import func secp256k1Converter.secp256k1_context_create
-import func secp256k1Converter.secp256k1_ecdsa_recoverable_signature
-import func secp256k1Converter.secp256k1_ecdsa_sign_recoverable
-import func secp256k1Converter.secp256k1_ecdsa_recoverable_signature_serialize_compact
-import func secp256k1Converter.secp256k1_context_destroy
-import var secp256k1Converter.SECP256K1_CONTEXT_SIGN
+import secp256k1
 
 public enum Ethereum {
     public static func address(privateKey: String) -> String {

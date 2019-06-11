@@ -22,7 +22,6 @@
 //  THE SOFTWARE.
 //
 
-import struct BitcoinKit.UnspentTransaction
 import Foundation
 
 public struct StandardUtxoSelector {
@@ -34,43 +33,25 @@ public struct StandardUtxoSelector {
         self.dustThreshhold = dustThreshhold
     }
 
-    public func select(from utxos: [UnspentTransaction], targetValue: UInt64) throws -> (utxos: [UnspentTransaction], fee: UInt64) {
-        // if target value is zero, fee is zero
-        guard targetValue > 0 else {
-            return ([], 0)
-        }
-
-        // definitions for the following caluculation
+    public func select(from utxos: [BTCUnspentTransaction],
+                       targetValue: UInt64) throws -> (utxos: [BTCUnspentTransaction], fee: UInt64) {
+        guard targetValue > 0 else { return ([], 0) }
         let doubleTargetValue = targetValue * 2
-        var numOutputs = 2 // if allow multiple output, it will be changed.
+        var numOutputs = 2
         var numInputs = 2
-        var fee: UInt64 {
-            return calculateFee(nIn: numInputs, nOut: numOutputs)
-        }
-        var targetWithFee: UInt64 {
-            return targetValue + fee
-        }
-        var targetWithFeeAndDust: UInt64 {
-            return targetWithFee + dustThreshhold
-        }
-
-        let sortedUtxos: [UnspentTransaction] = utxos.sorted(by: { $0.output.value < $1.output.value })
+        var fee: UInt64 { return calculateFee(nIn: numInputs, nOut: numOutputs) }
+        var targetWithFee: UInt64 { return targetValue + fee }
+        var targetWithFeeAndDust: UInt64 { return targetWithFee + dustThreshhold }
+        let sortedUtxos: [BTCUnspentTransaction] = utxos.sorted { $0.output.value < $1.output.value }
         let sum = sortedUtxos.sum()
-        // total values of utxos should be greater than targetValue
         guard sum >= targetValue && !sortedUtxos.isEmpty else {
             throw UtxoSelectError.insufficientFunds(targetValue - sum)
         }
-
-        // difference from 2x targetValue
         func distFrom2x(_ val: UInt64) -> UInt64 {
             if val > doubleTargetValue { return val - doubleTargetValue } else { return doubleTargetValue - val }
         }
 
-        // 1. Find a combination of the fewest outputs that is
-        //    (1) bigger than what we need
-        //    (2) closer to 2x the amount,
-        //    (3) and does not produce dust change.
-        txN:do {
+        txN: do {
             for numTx in (1...sortedUtxos.count) {
                 numInputs = numTx
                 let nOutputsSlices = sortedUtxos.eachSlices(numInputs)
@@ -82,8 +63,7 @@ public struct StandardUtxoSelector {
             }
         }
 
-        // 2. If not, find a combination of outputs that may produce dust change.
-        txDiscardDust:do {
+        txDiscardDust: do {
             for numTx in (1...sortedUtxos.count) {
                 numInputs = numTx
                 let nOutputsSlices = sortedUtxos.eachSlices(numInputs)
@@ -95,22 +75,17 @@ public struct StandardUtxoSelector {
                 }
             }
         }
-
         throw UtxoSelectError.insufficientFunds(targetWithFeeAndDust - sum)
     }
 
     private func calculateFee(nIn: Int, nOut: Int = 2) -> UInt64 {
-        var txsize: Int {
-            return ((148 * nIn) + (34 * nOut) + 10)
-        }
+        var txsize: Int { return ((148 * nIn) + (34 * nOut) + 10) }
         return UInt64(txsize) * feePerByte
     }
 }
 
-extension Sequence where Element == BitcoinKit.UnspentTransaction {
-    func sum() -> UInt64 {
-        return reduce(UInt64()) { $0 + UInt64($1.output.value) }
-    }
+extension Sequence where Element == BTCUnspentTransaction {
+    func sum() -> UInt64 { return reduce(UInt64()) { $0 + UInt64($1.output.value) } }
 }
 
 public enum UtxoSelectError: Error {

@@ -1,15 +1,11 @@
 PODS:
   - BigInt (4.0.0)
-  - BitcoinKit (1.0.2)
-  - BlockChainKit (1.2.0):
+  - BlockChainKit (1.3.0):
     - BigInt (~> 4.0.0)
-    - BitcoinKit (~> 1.0.2)
     - CryptoSwift (~> 1.0.0)
-    - secp256k1Converter (~> 0.1.0)
+    - secp256k1.swift (~> 0.1.0)
   - CryptoSwift (1.0.0)
   - secp256k1.swift (0.1.4)
-  - secp256k1Converter (0.1.0):
-    - secp256k1.swift (~> 0.1.4)
 
 DEPENDENCIES:
   - BlockChainKit (from `../`)
@@ -17,10 +13,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BigInt
-    - BitcoinKit
     - CryptoSwift
     - secp256k1.swift
-    - secp256k1Converter
 
 EXTERNAL SOURCES:
   BlockChainKit:
@@ -28,11 +22,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BigInt: 2aad1a9942dc932ec8b84290d2c564a3d76f97ab
-  BitcoinKit: 5502c14d72ab665fbe00dc72abd74439a38ef9bc
-  BlockChainKit: 20dd7583a9e491432759699302fecfff7b1ffb1f
+  BlockChainKit: 5ab0e232973def297a92087a728ef168e3becf45
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
-  secp256k1Converter: 962b648cf86148129d0481a56213bd00338b625e
 
 PODFILE CHECKSUM: b9359c0b5fd6a580695e871a28d370d55dc96e0b
 

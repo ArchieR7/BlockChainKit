@@ -7,52 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D7626B9150B69F9DB22DACD0B3D36B1 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43759C1BB3F920FB996E4B9C9065032D /* RLP.swift */; };
-		0FD3128C1C2E0D52CC3AC15EBE7AF155 /* BTCSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86D484EE93BFF848DB17F3D279F971 /* BTCSigner.swift */; };
-		1C5D2F30A3E55C46C650A0E899A3956E /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EC71B7DD25DA5915C813858F63068 /* RIPEMD160.swift */; };
-		2006E99205174A854EC7F7E2F7E0A56B /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2136CCB0D31EF03F2324354DF825A42 /* BigInt.framework */; };
-		297C27C5C9633000E89869BF7AB0AA4E /* Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8343D6BA62D03FD364685BF273D2 /* Ethereum.swift */; };
-		29A06CAAB92AEA50D0B44224ED423E2D /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A838AE0E6760890CBAB8D63E79D72 /* Mnemonic.swift */; };
-		3548C054634856DFBC653E6A9FAEE1F0 /* Bitcoin+BitcointKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65C5477FFEAF7156EE626226FD4825 /* Bitcoin+BitcointKit.swift */; };
-		4E74EAE661BED08ECE6360647176A972 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99ADDA6629446562ED6C814D10E3311 /* Crypto.swift */; };
-		6F721D97DE98C4C24D55FFE8DEF72859 /* BitcoinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AAD8D35224C85CB6726EC725C1CD7 /* BitcoinKit.framework */; };
-		756630AA4C54BB0805D673312289BE3E /* HDNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D5DD9EED7E055733A2821FEFB0A67 /* HDNode.swift */; };
-		7EBD1BE35759B5361F3256734E1857D0 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59793BBA036F0379FA6EC0F28D210D6 /* CryptoSwift.framework */; };
-		8BF762E09D78B5E690D6C174A3F7A246 /* BlockChainKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D65BB3A56DD3764D57A56B9E2E825E /* BlockChainKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CBABC894F7FC79579363E3C0C21ADEC /* StandardUtxoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB171316ACC10D965F49DFA348D79E /* StandardUtxoSelector.swift */; };
-		A2105955B8915BE4B826520F633A158A /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3B30DDB12CF5E18E7CBF7A07B8D3 /* Bitcoin.swift */; };
-		CB384EC1E9232FFD6DF07B9EAE927A85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E3D358AAAE3D41E1D5D74F5E3630F5 /* Foundation.framework */; };
-		DFCFBE2D405FE15DC31BB5AAD1347240 /* Wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A83B40CACDC408D49D79B2DD5CB62D /* Wordlist.swift */; };
-		E5FC68CC5E2601FDB86B252DEAB20615 /* BlockChainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB4A2D1BCD8FA5619671A71B612FD61 /* BlockChainKit-dummy.m */; };
-		ECC250AAAAE1C6409B50E0DDDBDFE3E0 /* BTCTransactionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBD09B973BE71513D4F078D3D502A0 /* BTCTransactionBuilder.swift */; };
-		FF0074658E92070B6A3955EE89C82C6C /* secp256k1Converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61730BB1A46E4176387E3E7CDA58F721 /* secp256k1Converter.framework */; };
+		249A0834672484CF686D0E72CA8BA33B /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E290AEC54BAEB7C22CA1C588E565E5 /* BigInt.framework */; };
+		262B1D06561C54DC83A0F33F30774304 /* BTCTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFA61457E86006EBBC1B0401FCF444 /* BTCTransaction.swift */; };
+		2B4EA50A863E9AAA6C90987BA3F694EB /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6625B9C79A0AF9D87326BEBFA964957 /* secp256k1.framework */; };
+		37AFDBD971D6BE98C160086100FADABA /* HDNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C22A5D9D26443740EA4EB509E7F3E /* HDNode.swift */; };
+		46182D486F0AE235EE04AEE2C2B1A880 /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D32A2F66461708CCE24034C0BE7C3F /* Bitcoin.swift */; };
+		4D5E778F395F844BEF150FD6CC9B7822 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F519C54C906C12FDB26396DBC69A4BF /* CryptoSwift.framework */; };
+		607065E313B06B6663175FC395D84999 /* StandardUtxoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856728FC2BA2AD94116F7AE2996F3FC /* StandardUtxoSelector.swift */; };
+		7480F0848CBB5662372CF1DCA467E6F5 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881AAC8FABB287CE6E190B6A4B0048D /* RLP.swift */; };
+		7B1DE9A6CA96434C3A509274C120D78D /* Wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6B84ED4E1D9E8BFD47C078D953CDE /* Wordlist.swift */; };
+		7D1F71DC4EC1D111AC2BDF3CEEE34BF5 /* BTCSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62624B1D0BBE42C6AAC1F97B88042E8C /* BTCSigner.swift */; };
+		83154113D9C1FC4FBB3775A32B35E7BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8024000BFDC49091967756C83BC271B4 /* Foundation.framework */; };
+		860DAB5E585A751229BA18CEF38E493F /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDF9AB57B4CD499D251105BACDC56D /* RIPEMD160.swift */; };
+		92DEFC04001AC35FCDBC313A74D63F10 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248BF5181094C3C1B96501EFE4638C9 /* Mnemonic.swift */; };
+		B26081013782356020D9A846A02792C3 /* Bitcoin+BitcointKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E3F4DFCC2A267585E39315693E562 /* Bitcoin+BitcointKit.swift */; };
+		CB9ADD7AD5E37F58D9E2D734313DAB23 /* Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C22059ADE1E8598C23B1EA3CDAC46 /* Ethereum.swift */; };
+		CCF7AB253FBDC7A999A230ECCE776106 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B16253BD596FAB10F890A9DCFE51E3 /* Crypto.swift */; };
+		DC894718E8914CD84D41A1632010CF3C /* BlockChainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9154038A663CFE315EA7BF812E1C5D /* BlockChainKit-dummy.m */; };
+		E7AE00AA34CEDE6EA42D1F86E39B3502 /* BTCTransactionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B3BA97FA9BAE1FC136F0916DE7DC7 /* BTCTransactionBuilder.swift */; };
+		EE5C66C03F6837753F072D1241429EE8 /* VarInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144173EBBBF2B5BB594950DC02437D3 /* VarInt.swift */; };
+		FBA814EFAC7FFAAAF0AA1800F0CF9D47 /* BlockChainKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A5A5282EC33EDD259D2C5E0F170117 /* BlockChainKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		53F0C9975CF92379FC2FA2383FDD8284 /* PBXContainerItemProxy */ = {
+		A09D2F61F0AF03C18C330B3E6C63A64C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F87E9AB2867A92FD5AF173D3210DD205 /* BigInt.xcodeproj */;
+			containerPortal = 1C9EFA6317D8D245A405A810395FF36D /* secp256k1.swift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E7C644EB40C08CAA736F7D223B3C49E;
+			remoteInfo = secp256k1.swift;
+		};
+		B47FA2B7CC1BF0B1626A8E1A2ACA7ECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A139EDFD4BF8EB9115675318013DA31 /* BigInt.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C7248D4B1E89C11E299F9AB2F52CA8AD;
 			remoteInfo = BigInt;
 		};
-		817DE9AC9D4FEC9CCEEF8DF22AA198F4 /* PBXContainerItemProxy */ = {
+		F4245A7848303F662F8403079E96A52E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1305EE83BF9BF8C9D383AC51F49459D4 /* secp256k1Converter.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C70BC45531D497C670A05EE0965D848;
-			remoteInfo = secp256k1Converter;
-		};
-		9E220282F0AFC691D844660CB0B1DC13 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F643CEC9C80401E0C511FAA4DAFB50F7 /* BitcoinKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 18988919054F9BBC7CF89BF076D136D0;
-			remoteInfo = BitcoinKit;
-		};
-		D1BDE6F39CF9FA7AC4A8B4052F9F9A64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 05649A4D55CCF788C6A9870348F165EE /* CryptoSwift.xcodeproj */;
+			containerPortal = 69C2B10E867922A3C339C9A676DA0EB7 /* CryptoSwift.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 4E1375FA494E41BCCDD9424A50665074;
 			remoteInfo = CryptoSwift;
@@ -60,55 +54,82 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05649A4D55CCF788C6A9870348F165EE /* CryptoSwift */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift; path = CryptoSwift.xcodeproj; sourceTree = "<group>"; };
-		0E86D484EE93BFF848DB17F3D279F971 /* BTCSigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BTCSigner.swift; sourceTree = "<group>"; };
-		1305EE83BF9BF8C9D383AC51F49459D4 /* secp256k1Converter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = secp256k1Converter; path = secp256k1Converter.xcodeproj; sourceTree = "<group>"; };
-		162EC71B7DD25DA5915C813858F63068 /* RIPEMD160.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
-		34CA02961E6F8917A7BD8F2A5C412527 /* BlockChainKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlockChainKit.xcconfig; sourceTree = "<group>"; };
-		43759C1BB3F920FB996E4B9C9065032D /* RLP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RLP.swift; sourceTree = "<group>"; };
-		43EBD09B973BE71513D4F078D3D502A0 /* BTCTransactionBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BTCTransactionBuilder.swift; sourceTree = "<group>"; };
-		45D65BB3A56DD3764D57A56B9E2E825E /* BlockChainKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlockChainKit-umbrella.h"; sourceTree = "<group>"; };
-		552A838AE0E6760890CBAB8D63E79D72 /* Mnemonic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
-		5E81DA53CE6E37B1E0CD6EF6478C435F /* BlockChainKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlockChainKit-Info.plist"; sourceTree = "<group>"; };
-		61730BB1A46E4176387E3E7CDA58F721 /* secp256k1Converter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = secp256k1Converter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74D312B39E598F32C2A30177588C5FB8 /* BlockChainKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlockChainKit.modulemap; sourceTree = "<group>"; };
-		75A83B40CACDC408D49D79B2DD5CB62D /* Wordlist.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Wordlist.swift; sourceTree = "<group>"; };
-		7F4AAD8D35224C85CB6726EC725C1CD7 /* BitcoinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E3B3BA97FA9BAE1FC136F0916DE7DC7 /* BTCTransactionBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BTCTransactionBuilder.swift; sourceTree = "<group>"; };
+		1856728FC2BA2AD94116F7AE2996F3FC /* StandardUtxoSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardUtxoSelector.swift; sourceTree = "<group>"; };
+		1C9EFA6317D8D245A405A810395FF36D /* secp256k1.swift */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = secp256k1.swift; path = secp256k1.swift.xcodeproj; sourceTree = "<group>"; };
+		37CDF9AB57B4CD499D251105BACDC56D /* RIPEMD160.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
+		39D32A2F66461708CCE24034C0BE7C3F /* Bitcoin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
+		454C22A5D9D26443740EA4EB509E7F3E /* HDNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HDNode.swift; sourceTree = "<group>"; };
+		4A139EDFD4BF8EB9115675318013DA31 /* BigInt */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BigInt; path = BigInt.xcodeproj; sourceTree = "<group>"; };
+		6144173EBBBF2B5BB594950DC02437D3 /* VarInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VarInt.swift; sourceTree = "<group>"; };
+		62624B1D0BBE42C6AAC1F97B88042E8C /* BTCSigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BTCSigner.swift; sourceTree = "<group>"; };
+		63DFC6471BC1A776D26F8877D5066C15 /* BlockChainKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BlockChainKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		69C2B10E867922A3C339C9A676DA0EB7 /* CryptoSwift */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift; path = CryptoSwift.xcodeproj; sourceTree = "<group>"; };
+		78A5A5282EC33EDD259D2C5E0F170117 /* BlockChainKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlockChainKit-umbrella.h"; sourceTree = "<group>"; };
+		8024000BFDC49091967756C83BC271B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		827C1A0CD02FC90A64A3FB5935798514 /* BlockChainKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BlockChainKit.framework; path = BlockChainKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84AE3B30DDB12CF5E18E7CBF7A07B8D3 /* Bitcoin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
-		949E8343D6BA62D03FD364685BF273D2 /* Ethereum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ethereum.swift; sourceTree = "<group>"; };
-		A0FB171316ACC10D965F49DFA348D79E /* StandardUtxoSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardUtxoSelector.swift; sourceTree = "<group>"; };
-		A2136CCB0D31EF03F2324354DF825A42 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF65C5477FFEAF7156EE626226FD4825 /* Bitcoin+BitcointKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bitcoin+BitcointKit.swift"; sourceTree = "<group>"; };
-		C99ADDA6629446562ED6C814D10E3311 /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		D2AC9129EFB71718DDED52C79E8EBB17 /* BlockChainKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BlockChainKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D59793BBA036F0379FA6EC0F28D210D6 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D993B00863E9A939F2FE988B8E311B56 /* BlockChainKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlockChainKit-prefix.pch"; sourceTree = "<group>"; };
-		E66BA96646CFA6637EE9B26E1BB9B807 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		EFB4A2D1BCD8FA5619671A71B612FD61 /* BlockChainKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlockChainKit-dummy.m"; sourceTree = "<group>"; };
-		F5E3D358AAAE3D41E1D5D74F5E3630F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F643CEC9C80401E0C511FAA4DAFB50F7 /* BitcoinKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BitcoinKit; path = BitcoinKit.xcodeproj; sourceTree = "<group>"; };
-		F79709E9FB020AE6D837A873DE42E63C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		F87E9AB2867A92FD5AF173D3210DD205 /* BigInt */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BigInt; path = BigInt.xcodeproj; sourceTree = "<group>"; };
-		FF0D5DD9EED7E055733A2821FEFB0A67 /* HDNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HDNode.swift; sourceTree = "<group>"; };
+		830D867A4B60D0B121802E25C0C98EFE /* BlockChainKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlockChainKit.xcconfig; sourceTree = "<group>"; };
+		84E290AEC54BAEB7C22CA1C588E565E5 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F519C54C906C12FDB26396DBC69A4BF /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94399CB36BFE39ACCBBF8FAD173B2BD5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9C3C22059ADE1E8598C23B1EA3CDAC46 /* Ethereum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ethereum.swift; sourceTree = "<group>"; };
+		A1E6B84ED4E1D9E8BFD47C078D953CDE /* Wordlist.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Wordlist.swift; sourceTree = "<group>"; };
+		A6625B9C79A0AF9D87326BEBFA964957 /* secp256k1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = secp256k1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF10D6B1A5BDA6ABF37BC326124826F8 /* BlockChainKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlockChainKit.modulemap; sourceTree = "<group>"; };
+		B69E3F4DFCC2A267585E39315693E562 /* Bitcoin+BitcointKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bitcoin+BitcointKit.swift"; sourceTree = "<group>"; };
+		C01DA7A5C65A757415F2222E7F969B4F /* BlockChainKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlockChainKit-prefix.pch"; sourceTree = "<group>"; };
+		C248BF5181094C3C1B96501EFE4638C9 /* Mnemonic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
+		C4EFA61457E86006EBBC1B0401FCF444 /* BTCTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BTCTransaction.swift; sourceTree = "<group>"; };
+		CE289A529F41B131D04AB78FBDA46D5B /* BlockChainKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlockChainKit-Info.plist"; sourceTree = "<group>"; };
+		D9B16253BD596FAB10F890A9DCFE51E3 /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		DE9154038A663CFE315EA7BF812E1C5D /* BlockChainKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlockChainKit-dummy.m"; sourceTree = "<group>"; };
+		EF82AF8E6339FCB8E9499C25BD6EE1D5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F881AAC8FABB287CE6E190B6A4B0048D /* RLP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RLP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5C3B101AEA2953EA32AF2B9DE9647CE7 /* Frameworks */ = {
+		D6C48F202BB960786EDF8C8D29545EED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2006E99205174A854EC7F7E2F7E0A56B /* BigInt.framework in Frameworks */,
-				6F721D97DE98C4C24D55FFE8DEF72859 /* BitcoinKit.framework in Frameworks */,
-				7EBD1BE35759B5361F3256734E1857D0 /* CryptoSwift.framework in Frameworks */,
-				CB384EC1E9232FFD6DF07B9EAE927A85 /* Foundation.framework in Frameworks */,
-				FF0074658E92070B6A3955EE89C82C6C /* secp256k1Converter.framework in Frameworks */,
+				249A0834672484CF686D0E72CA8BA33B /* BigInt.framework in Frameworks */,
+				4D5E778F395F844BEF150FD6CC9B7822 /* CryptoSwift.framework in Frameworks */,
+				83154113D9C1FC4FBB3775A32B35E7BE /* Foundation.framework in Frameworks */,
+				2B4EA50A863E9AAA6C90987BA3F694EB /* secp256k1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D16E51184137AD7E77194E94F4DCC74 /* Bitcoin */ = {
+			isa = PBXGroup;
+			children = (
+				B69E3F4DFCC2A267585E39315693E562 /* Bitcoin+BitcointKit.swift */,
+				62624B1D0BBE42C6AAC1F97B88042E8C /* BTCSigner.swift */,
+				C4EFA61457E86006EBBC1B0401FCF444 /* BTCTransaction.swift */,
+				0E3B3BA97FA9BAE1FC136F0916DE7DC7 /* BTCTransactionBuilder.swift */,
+				1856728FC2BA2AD94116F7AE2996F3FC /* StandardUtxoSelector.swift */,
+				6144173EBBBF2B5BB594950DC02437D3 /* VarInt.swift */,
+			);
+			name = Bitcoin;
+			path = BlockChainKit/Classes/Bitcoin;
+			sourceTree = "<group>";
+		};
+		0D1F34A77DCD1BF4738545998DF8F301 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF10D6B1A5BDA6ABF37BC326124826F8 /* BlockChainKit.modulemap */,
+				830D867A4B60D0B121802E25C0C98EFE /* BlockChainKit.xcconfig */,
+				DE9154038A663CFE315EA7BF812E1C5D /* BlockChainKit-dummy.m */,
+				CE289A529F41B131D04AB78FBDA46D5B /* BlockChainKit-Info.plist */,
+				C01DA7A5C65A757415F2222E7F969B4F /* BlockChainKit-prefix.pch */,
+				78A5A5282EC33EDD259D2C5E0F170117 /* BlockChainKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BlockChainKit";
+			sourceTree = "<group>";
+		};
 		31651D51C6CC17536C103BA537522865 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,119 +138,91 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		325BBDAF63DC6FD30C4771BDB1BDAB17 /* Core */ = {
+		346E9AC5BC130A85EC660DC023384C04 /* BlockChainKit */ = {
 			isa = PBXGroup;
 			children = (
-				84AE3B30DDB12CF5E18E7CBF7A07B8D3 /* Bitcoin.swift */,
-				C99ADDA6629446562ED6C814D10E3311 /* Crypto.swift */,
-				949E8343D6BA62D03FD364685BF273D2 /* Ethereum.swift */,
-				FF0D5DD9EED7E055733A2821FEFB0A67 /* HDNode.swift */,
-				552A838AE0E6760890CBAB8D63E79D72 /* Mnemonic.swift */,
-				162EC71B7DD25DA5915C813858F63068 /* RIPEMD160.swift */,
-				43759C1BB3F920FB996E4B9C9065032D /* RLP.swift */,
-				75A83B40CACDC408D49D79B2DD5CB62D /* Wordlist.swift */,
-			);
-			name = Core;
-			path = BlockChainKit/Classes/Core;
-			sourceTree = "<group>";
-		};
-		49497906CEA6B28CD75A7A5460283126 = {
-			isa = PBXGroup;
-			children = (
-				7B7C8512E2DA854EC2C87954F39F75FA /* BlockChainKit */,
-				5FD59B5A992B2B867A26984BBCECA25C /* Dependencies */,
-				54B3356474C55D3EF3B25223C39D738A /* Frameworks */,
-				31651D51C6CC17536C103BA537522865 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		4BB2A39F8AF9F124306BDC0E9640604E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				74D312B39E598F32C2A30177588C5FB8 /* BlockChainKit.modulemap */,
-				34CA02961E6F8917A7BD8F2A5C412527 /* BlockChainKit.xcconfig */,
-				EFB4A2D1BCD8FA5619671A71B612FD61 /* BlockChainKit-dummy.m */,
-				5E81DA53CE6E37B1E0CD6EF6478C435F /* BlockChainKit-Info.plist */,
-				D993B00863E9A939F2FE988B8E311B56 /* BlockChainKit-prefix.pch */,
-				45D65BB3A56DD3764D57A56B9E2E825E /* BlockChainKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BlockChainKit";
-			sourceTree = "<group>";
-		};
-		54B3356474C55D3EF3B25223C39D738A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A2136CCB0D31EF03F2324354DF825A42 /* BigInt.framework */,
-				7F4AAD8D35224C85CB6726EC725C1CD7 /* BitcoinKit.framework */,
-				D59793BBA036F0379FA6EC0F28D210D6 /* CryptoSwift.framework */,
-				61730BB1A46E4176387E3E7CDA58F721 /* secp256k1Converter.framework */,
-				5C8389DC229A9031F0E1FA71EC9D3267 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5C8389DC229A9031F0E1FA71EC9D3267 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F5E3D358AAAE3D41E1D5D74F5E3630F5 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5FD59B5A992B2B867A26984BBCECA25C /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				F87E9AB2867A92FD5AF173D3210DD205 /* BigInt */,
-				F643CEC9C80401E0C511FAA4DAFB50F7 /* BitcoinKit */,
-				05649A4D55CCF788C6A9870348F165EE /* CryptoSwift */,
-				1305EE83BF9BF8C9D383AC51F49459D4 /* secp256k1Converter */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		7B7C8512E2DA854EC2C87954F39F75FA /* BlockChainKit */ = {
-			isa = PBXGroup;
-			children = (
-				E4632653CBC09F8EA71E3AAC20E200D4 /* Bitcoin */,
-				325BBDAF63DC6FD30C4771BDB1BDAB17 /* Core */,
-				9B8ADE75C42307BD9EEA4D270E5B9019 /* Pod */,
-				4BB2A39F8AF9F124306BDC0E9640604E /* Support Files */,
+				0D16E51184137AD7E77194E94F4DCC74 /* Bitcoin */,
+				54C57A344EA1A1BBCA2773BEB34A8921 /* Core */,
+				86B7FF2F371DEB4931A76D5C5D1BB2EA /* Pod */,
+				0D1F34A77DCD1BF4738545998DF8F301 /* Support Files */,
 			);
 			name = BlockChainKit;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		9B8ADE75C42307BD9EEA4D270E5B9019 /* Pod */ = {
+		49497906CEA6B28CD75A7A5460283126 = {
 			isa = PBXGroup;
 			children = (
-				D2AC9129EFB71718DDED52C79E8EBB17 /* BlockChainKit.podspec */,
-				F79709E9FB020AE6D837A873DE42E63C /* LICENSE */,
-				E66BA96646CFA6637EE9B26E1BB9B807 /* README.md */,
+				346E9AC5BC130A85EC660DC023384C04 /* BlockChainKit */,
+				A4C885C07EAF7A7CEEC939B1B63221ED /* Dependencies */,
+				5A69E6DAE750720A433C6AF467215724 /* Frameworks */,
+				31651D51C6CC17536C103BA537522865 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54C57A344EA1A1BBCA2773BEB34A8921 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				39D32A2F66461708CCE24034C0BE7C3F /* Bitcoin.swift */,
+				D9B16253BD596FAB10F890A9DCFE51E3 /* Crypto.swift */,
+				9C3C22059ADE1E8598C23B1EA3CDAC46 /* Ethereum.swift */,
+				454C22A5D9D26443740EA4EB509E7F3E /* HDNode.swift */,
+				C248BF5181094C3C1B96501EFE4638C9 /* Mnemonic.swift */,
+				37CDF9AB57B4CD499D251105BACDC56D /* RIPEMD160.swift */,
+				F881AAC8FABB287CE6E190B6A4B0048D /* RLP.swift */,
+				A1E6B84ED4E1D9E8BFD47C078D953CDE /* Wordlist.swift */,
+			);
+			name = Core;
+			path = BlockChainKit/Classes/Core;
+			sourceTree = "<group>";
+		};
+		5A69E6DAE750720A433C6AF467215724 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84E290AEC54BAEB7C22CA1C588E565E5 /* BigInt.framework */,
+				8F519C54C906C12FDB26396DBC69A4BF /* CryptoSwift.framework */,
+				A6625B9C79A0AF9D87326BEBFA964957 /* secp256k1.framework */,
+				9E8BFB981A3A6A6CF919985836F26C1B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86B7FF2F371DEB4931A76D5C5D1BB2EA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				63DFC6471BC1A776D26F8877D5066C15 /* BlockChainKit.podspec */,
+				94399CB36BFE39ACCBBF8FAD173B2BD5 /* LICENSE */,
+				EF82AF8E6339FCB8E9499C25BD6EE1D5 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		E4632653CBC09F8EA71E3AAC20E200D4 /* Bitcoin */ = {
+		9E8BFB981A3A6A6CF919985836F26C1B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BF65C5477FFEAF7156EE626226FD4825 /* Bitcoin+BitcointKit.swift */,
-				0E86D484EE93BFF848DB17F3D279F971 /* BTCSigner.swift */,
-				43EBD09B973BE71513D4F078D3D502A0 /* BTCTransactionBuilder.swift */,
-				A0FB171316ACC10D965F49DFA348D79E /* StandardUtxoSelector.swift */,
+				8024000BFDC49091967756C83BC271B4 /* Foundation.framework */,
 			);
-			name = Bitcoin;
-			path = BlockChainKit/Classes/Bitcoin;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A4C885C07EAF7A7CEEC939B1B63221ED /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				4A139EDFD4BF8EB9115675318013DA31 /* BigInt */,
+				69C2B10E867922A3C339C9A676DA0EB7 /* CryptoSwift */,
+				1C9EFA6317D8D245A405A810395FF36D /* secp256k1.swift */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E40D42B774FCB0DD7C619D38450A3E6C /* Headers */ = {
+		18988756943E5FF8377780131D1FBAE4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BF762E09D78B5E690D6C174A3F7A246 /* BlockChainKit-umbrella.h in Headers */,
+				FBA814EFAC7FFAAAF0AA1800F0CF9D47 /* BlockChainKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,20 +231,19 @@
 /* Begin PBXNativeTarget section */
 		C37338ACCE2E3F359CB08BDBAA03551F /* BlockChainKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 445FDADCE21737581631DAC2C3C2058B /* Build configuration list for PBXNativeTarget "BlockChainKit" */;
+			buildConfigurationList = 77665EA958655B0D10C91F1B083E02FC /* Build configuration list for PBXNativeTarget "BlockChainKit" */;
 			buildPhases = (
-				E40D42B774FCB0DD7C619D38450A3E6C /* Headers */,
-				79F9ACC1E74C2E7D489F2CF2E05E6C91 /* Sources */,
-				5C3B101AEA2953EA32AF2B9DE9647CE7 /* Frameworks */,
-				53C769A78043BC96FD90E52002B816B3 /* Resources */,
+				18988756943E5FF8377780131D1FBAE4 /* Headers */,
+				EF94E97B8C1A84F2FB6D7BBD275F27CC /* Sources */,
+				D6C48F202BB960786EDF8C8D29545EED /* Frameworks */,
+				4D4DAC90283A02D76BFC7ED540A6CD86 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				749467E752AAF9236C9E99369B9F7E9E /* PBXTargetDependency */,
-				A7D15C16CE83C1A428A6DB7ED2EBAF2E /* PBXTargetDependency */,
-				F1B5E4019CFEE035995BFBAF035590B9 /* PBXTargetDependency */,
-				C7128A5E6BE3C8A16544F4C32AFC14A3 /* PBXTargetDependency */,
+				DFC04F628911FDC7A6FBF8D3D8BED138 /* PBXTargetDependency */,
+				3C9B1BD0A6B5A26CF4831C100E89B7F4 /* PBXTargetDependency */,
+				6B52818EA8C6A96AE9A08A5F8DD9230D /* PBXTargetDependency */,
 			);
 			name = BlockChainKit;
 			productName = BlockChainKit;
@@ -279,16 +271,13 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = 05649A4D55CCF788C6A9870348F165EE /* CryptoSwift */;
+					ProjectRef = 69C2B10E867922A3C339C9A676DA0EB7 /* CryptoSwift */;
 				},
 				{
-					ProjectRef = F87E9AB2867A92FD5AF173D3210DD205 /* BigInt */;
+					ProjectRef = 4A139EDFD4BF8EB9115675318013DA31 /* BigInt */;
 				},
 				{
-					ProjectRef = 1305EE83BF9BF8C9D383AC51F49459D4 /* secp256k1Converter */;
-				},
-				{
-					ProjectRef = F643CEC9C80401E0C511FAA4DAFB50F7 /* BitcoinKit */;
+					ProjectRef = 1C9EFA6317D8D245A405A810395FF36D /* secp256k1.swift */;
 				},
 			);
 			projectRoot = "";
@@ -299,7 +288,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		53C769A78043BC96FD90E52002B816B3 /* Resources */ = {
+		4D4DAC90283A02D76BFC7ED540A6CD86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,55 +298,86 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		79F9ACC1E74C2E7D489F2CF2E05E6C91 /* Sources */ = {
+		EF94E97B8C1A84F2FB6D7BBD275F27CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3548C054634856DFBC653E6A9FAEE1F0 /* Bitcoin+BitcointKit.swift in Sources */,
-				A2105955B8915BE4B826520F633A158A /* Bitcoin.swift in Sources */,
-				E5FC68CC5E2601FDB86B252DEAB20615 /* BlockChainKit-dummy.m in Sources */,
-				0FD3128C1C2E0D52CC3AC15EBE7AF155 /* BTCSigner.swift in Sources */,
-				ECC250AAAAE1C6409B50E0DDDBDFE3E0 /* BTCTransactionBuilder.swift in Sources */,
-				4E74EAE661BED08ECE6360647176A972 /* Crypto.swift in Sources */,
-				297C27C5C9633000E89869BF7AB0AA4E /* Ethereum.swift in Sources */,
-				756630AA4C54BB0805D673312289BE3E /* HDNode.swift in Sources */,
-				29A06CAAB92AEA50D0B44224ED423E2D /* Mnemonic.swift in Sources */,
-				1C5D2F30A3E55C46C650A0E899A3956E /* RIPEMD160.swift in Sources */,
-				0D7626B9150B69F9DB22DACD0B3D36B1 /* RLP.swift in Sources */,
-				9CBABC894F7FC79579363E3C0C21ADEC /* StandardUtxoSelector.swift in Sources */,
-				DFCFBE2D405FE15DC31BB5AAD1347240 /* Wordlist.swift in Sources */,
+				B26081013782356020D9A846A02792C3 /* Bitcoin+BitcointKit.swift in Sources */,
+				46182D486F0AE235EE04AEE2C2B1A880 /* Bitcoin.swift in Sources */,
+				DC894718E8914CD84D41A1632010CF3C /* BlockChainKit-dummy.m in Sources */,
+				7D1F71DC4EC1D111AC2BDF3CEEE34BF5 /* BTCSigner.swift in Sources */,
+				262B1D06561C54DC83A0F33F30774304 /* BTCTransaction.swift in Sources */,
+				E7AE00AA34CEDE6EA42D1F86E39B3502 /* BTCTransactionBuilder.swift in Sources */,
+				CCF7AB253FBDC7A999A230ECCE776106 /* Crypto.swift in Sources */,
+				CB9ADD7AD5E37F58D9E2D734313DAB23 /* Ethereum.swift in Sources */,
+				37AFDBD971D6BE98C160086100FADABA /* HDNode.swift in Sources */,
+				92DEFC04001AC35FCDBC313A74D63F10 /* Mnemonic.swift in Sources */,
+				860DAB5E585A751229BA18CEF38E493F /* RIPEMD160.swift in Sources */,
+				7480F0848CBB5662372CF1DCA467E6F5 /* RLP.swift in Sources */,
+				607065E313B06B6663175FC395D84999 /* StandardUtxoSelector.swift in Sources */,
+				EE5C66C03F6837753F072D1241429EE8 /* VarInt.swift in Sources */,
+				7B1DE9A6CA96434C3A509274C120D78D /* Wordlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		749467E752AAF9236C9E99369B9F7E9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BigInt;
-			targetProxy = 53F0C9975CF92379FC2FA2383FDD8284 /* PBXContainerItemProxy */;
-		};
-		A7D15C16CE83C1A428A6DB7ED2EBAF2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BitcoinKit;
-			targetProxy = 9E220282F0AFC691D844660CB0B1DC13 /* PBXContainerItemProxy */;
-		};
-		C7128A5E6BE3C8A16544F4C32AFC14A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = secp256k1Converter;
-			targetProxy = 817DE9AC9D4FEC9CCEEF8DF22AA198F4 /* PBXContainerItemProxy */;
-		};
-		F1B5E4019CFEE035995BFBAF035590B9 /* PBXTargetDependency */ = {
+		3C9B1BD0A6B5A26CF4831C100E89B7F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CryptoSwift;
-			targetProxy = D1BDE6F39CF9FA7AC4A8B4052F9F9A64 /* PBXContainerItemProxy */;
+			targetProxy = F4245A7848303F662F8403079E96A52E /* PBXContainerItemProxy */;
+		};
+		6B52818EA8C6A96AE9A08A5F8DD9230D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = secp256k1.swift;
+			targetProxy = A09D2F61F0AF03C18C330B3E6C63A64C /* PBXContainerItemProxy */;
+		};
+		DFC04F628911FDC7A6FBF8D3D8BED138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			targetProxy = B47FA2B7CC1BF0B1626A8E1A2ACA7ECE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		AC385EB82DD3FC0CB4026E4164745117 /* Debug */ = {
+		1A995A1A56BBF7958F842CD8C1B1B10E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34CA02961E6F8917A7BD8F2A5C412527 /* BlockChainKit.xcconfig */;
+			baseConfigurationReference = 830D867A4B60D0B121802E25C0C98EFE /* BlockChainKit.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlockChainKit/BlockChainKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlockChainKit/BlockChainKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlockChainKit/BlockChainKit.modulemap";
+				PRODUCT_MODULE_NAME = BlockChainKit;
+				PRODUCT_NAME = BlockChainKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		94EF1576531ED69231B1F3ECDDEC1878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830D867A4B60D0B121802E25C0C98EFE /* BlockChainKit.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -512,48 +532,14 @@
 			};
 			name = Debug;
 		};
-		CE2857D39750CA9924A1B2738EAEF702 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34CA02961E6F8917A7BD8F2A5C412527 /* BlockChainKit.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BlockChainKit/BlockChainKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BlockChainKit/BlockChainKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BlockChainKit/BlockChainKit.modulemap";
-				PRODUCT_MODULE_NAME = BlockChainKit;
-				PRODUCT_NAME = BlockChainKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		445FDADCE21737581631DAC2C3C2058B /* Build configuration list for PBXNativeTarget "BlockChainKit" */ = {
+		77665EA958655B0D10C91F1B083E02FC /* Build configuration list for PBXNativeTarget "BlockChainKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC385EB82DD3FC0CB4026E4164745117 /* Debug */,
-				CE2857D39750CA9924A1B2738EAEF702 /* Release */,
+				94EF1576531ED69231B1F3ECDDEC1878 /* Debug */,
+				1A995A1A56BBF7958F842CD8C1B1B10E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

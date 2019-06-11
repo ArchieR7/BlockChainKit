@@ -1,78 +1,31 @@
-//
-//  StandardTransactionSigner.swift
-//
-//  Copyright © 2018 BitcoinKit developers
-//
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-//  THE SOFTWARE.
-//
-
-import struct BitcoinKit.UnsignedTransaction
-import struct BitcoinKit.PrivateKey
-import struct BitcoinKit.Transaction
-import struct BitcoinKit.TransactionInput
-import struct BitcoinKit.SighashType
-import class BitcoinKit.Script
-import struct BitcoinKit.Crypto
-import Foundation
-
-public struct StandardTransactionSigner: TransactionSigner {
-    public init() {}
-
-    public func sign(_ unsignedTransaction: UnsignedTransaction, with keys: [PrivateKey]) throws -> Transaction {
-        // Define Transaction
-        var signingInputs: [TransactionInput]
-        var signingTransaction: Transaction {
-            let tx: Transaction = unsignedTransaction.tx
-            return Transaction(version: tx.version, inputs: signingInputs, outputs: tx.outputs, lockTime: tx.lockTime)
+public enum BTCSigner {
+    public static func sign(_ unsigned: BTCUnsignedTransaction,
+                            with keys: [Data],
+                            isCompressed: Bool) throws -> BTCTransaction {
+        var signingInputs: [BTCTransactionInput]
+        var signingTransaction: BTCTransaction {
+            let tx: BTCTransaction = unsigned.tx
+            return BTCTransaction(version: tx.version,
+                                  inputs: signingInputs,
+                                  outputs: tx.outputs,
+                                  lockTime: tx.lockTime)
         }
-
-        // Sign
-        signingInputs = unsignedTransaction.tx.inputs
-        let hashType = SighashType.BTC.ALL
-        for (i, utxo) in unsignedTransaction.utxos.enumerated() {
-            // Select key
-            let pubkeyHash: Data = Script.getPublicKeyHash(from: utxo.output.lockingScript)
-
-            let keysOfUtxo: [PrivateKey] = keys.filter { $0.publicKey().pubkeyHash == pubkeyHash }
-            guard let key = keysOfUtxo.first else {
-                continue
-            }
-
-            // Sign transaction hash
-            let sighash: Data = signingTransaction.signatureHash(for: utxo.output, inputIndex: i, hashType: SighashType.BTC.ALL)
-            let signature: Data = try BitcoinKit.Crypto.sign(sighash, privateKey: key)
+        signingInputs = unsigned.tx.inputs
+        for (i, utxo) in unsigned.utxos.enumerated() {
+            let pubkeyHash = utxo.output.lockingScript[3..<23]
+            guard let key = keys.filter({
+                RIPEMD160.hash(Bitcoin.publicKey(privateKey: $0, isCompressed: isCompressed).sha256()) == pubkeyHash
+            }).first else { continue }
+            let sighash = signingTransaction.signatureHash(for: utxo.output, inputIndex: i)
+            let signature = Crypto.sign(key: sighash, data: key)
             let txin = signingInputs[i]
-            let pubkey = key.publicKey()
-
-            // Create Signature Script
-            let sigWithHashType: Data = signature + [UInt8(hashType)]
-            let unlockingScript: Script = try Script()
-                .appendData(sigWithHashType)
-                .appendData(pubkey.raw)
-
-            // Update TransactionInput
-            signingInputs[i] = TransactionInput(previousOutput: txin.previousOutput, signatureScript: unlockingScript.data, sequence: txin.sequence)
+            let pubkey = Bitcoin.publicKey(privateKey: key, isCompressed: isCompressed)
+            let sigWithHashType = signature + Data(UInt32(0x00000001).UInt8ArrayLE)
+            let unlocking = sigWithHashType + pubkey
+            signingInputs[i] = BTCTransactionInput(previousOutput: txin.previousOutput,
+                                                   signatureScript: unlocking,
+                                                   sequence: txin.sequence)
         }
         return signingTransaction
     }
-}
-
-public protocol TransactionSigner {
-    func sign(_ unsignedTransaction: UnsignedTransaction, with keys: [PrivateKey]) throws -> Transaction
 }
