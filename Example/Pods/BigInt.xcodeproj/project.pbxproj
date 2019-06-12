@@ -46,8 +46,8 @@
 		36DC17C33E5245F3FF7A73E90E1BBD28 /* Hashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hashable.swift; path = Sources/Hashable.swift; sourceTree = "<group>"; };
 		3750C43674DDA8A905E33133BCD70EA9 /* Integer Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer Conversion.swift"; path = "Sources/Integer Conversion.swift"; sourceTree = "<group>"; };
 		3DDDC7C2B9345E4688123B95F863B290 /* Bitwise Ops.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bitwise Ops.swift"; path = "Sources/Bitwise Ops.swift"; sourceTree = "<group>"; };
+		484367A746DF9DB396B6877912F50B3E /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt.framework; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A6C010B2806F1632A6F53D06F29795 /* BigInt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.xcconfig; sourceTree = "<group>"; };
-		5B309655EEB9FA93E27F137F3856B910 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt.framework; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFADB8D956EA24CC85F5F28941675AA /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = Sources/GCD.swift; sourceTree = "<group>"; };
 		69C7AA6D27FE7181633DF34B0B25DF54 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = Sources/Strideable.swift; sourceTree = "<group>"; };
 		7B3073662B3D4544BCFA308F89E40AAD /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = Sources/Subtraction.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		FAA9E2458957D15966C264DBF44E125A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B309655EEB9FA93E27F137F3856B910 /* BigInt.framework */,
+				484367A746DF9DB396B6877912F50B3E /* BigInt.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			);
 			name = BigInt;
 			productName = BigInt;
-			productReference = 5B309655EEB9FA93E27F137F3856B910 /* BigInt.framework */;
+			productReference = 484367A746DF9DB396B6877912F50B3E /* BigInt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

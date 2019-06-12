@@ -38,7 +38,7 @@ public struct BTCTransaction {
         data.append(Data(txin.sequence.UInt8ArrayLE))
         data.append(outputs.reduce(Data(), { $0 + $1.serialized }))
         data.append(Data(lockTime.UInt8ArrayLE))
-        data.append(Data(UInt32(0x00000001).UInt8ArrayLE))
+        data.append(Data(UInt32(0x01).UInt8ArrayLE))
         return data.sha256().sha256()
     }
 }

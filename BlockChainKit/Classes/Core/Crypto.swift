@@ -32,18 +32,7 @@ public enum Crypto {
     }
 
     public static func sign(key: Data, data: Data) -> Data {
-        let context = secp256k1_context_create(UInt32(SECP256K1_CONTEXT_SIGN))!
-        defer { secp256k1_context_destroy(context) }
-        var signature = secp256k1_ecdsa_recoverable_signature()
-        var secretKey = key.bytes
-        var hash = data.bytes
-        guard secp256k1_ecdsa_sign_recoverable(context, &signature, &hash, &secretKey, nil, nil) == 1 else {
-            fatalError("secp256k1 ecdsa sign recoverable")
-        }
-        var output64 = Data(repeating: 0, count: 64).bytes
-        var recid: Int32 = 0
-        secp256k1_ecdsa_recoverable_signature_serialize_compact(context, &output64, &recid, &signature)
-        return Data(output64)
+        return _Crypto.signMessage(data, withPrivateKey: key)
     }
 }
 

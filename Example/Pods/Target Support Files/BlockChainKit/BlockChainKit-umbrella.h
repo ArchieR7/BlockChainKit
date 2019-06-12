@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "CryptoSign.h"
 
 FOUNDATION_EXPORT double BlockChainKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char BlockChainKitVersionString[];

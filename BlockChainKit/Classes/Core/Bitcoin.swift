@@ -10,7 +10,7 @@ import Foundation
 public enum Bitcoin {
     public static func privateData(wif: String) -> Data? {
         guard let WIFData = try? Base58.decode(wif) else { return nil }
-        return WIFData.dropFirst().dropLast(5)
+        return WIFData.dropFirst().dropLast(4)
     }
 
     public static func publicKey(privateKey: Data, isCompressed: Bool) -> Data {

@@ -20,12 +20,18 @@ public enum BTCSigner {
             let signature = Crypto.sign(key: sighash, data: key)
             let txin = signingInputs[i]
             let pubkey = Bitcoin.publicKey(privateKey: key, isCompressed: isCompressed)
-            let sigWithHashType = signature + Data(UInt32(0x00000001).UInt8ArrayLE)
-            let unlocking = sigWithHashType + pubkey
+            let result = unlocking(signature: signature, pubkey: pubkey)
             signingInputs[i] = BTCTransactionInput(previousOutput: txin.previousOutput,
-                                                   signatureScript: unlocking,
+                                                   signatureScript: result,
                                                    sequence: txin.sequence)
         }
         return signingTransaction
+    }
+
+    public static func unlocking(signature: Data, pubkey: Data) -> Data {
+        var data = Data([UInt8(signature.count + 1)]) + signature + [0x01]
+        data.append(contentsOf: [UInt8(pubkey.count)])
+        data.append(pubkey)
+        return data
     }
 }

@@ -56,6 +56,7 @@
 /* Begin PBXFileReference section */
 		0F8DC9612092053D49813307F4F4126A /* Pods-BlockChainKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlockChainKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		10E62F6B356AB736F864636498A419D1 /* Pods-BlockChainKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlockChainKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		17ABAC6CC945DA8878FB26A634A3C7E4 /* Pods_BlockChainKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlockChainKit_Example.framework; path = "Pods-BlockChainKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7C1FCE619AD578AFEFD1ED8F975E60 /* Pods-BlockChainKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlockChainKit_Example-Info.plist"; sourceTree = "<group>"; };
 		24357089054951D42B051CB4B093FBB7 /* Pods-BlockChainKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlockChainKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		248F6DBDDE55E2D59BAC4C4E5648B554 /* Pods-BlockChainKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlockChainKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -75,10 +76,9 @@
 		7C649A58D28AE163229429409D1E13FB /* Pods-BlockChainKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlockChainKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8C7D83EE831B752C8B6DBBFB9F4AD77B /* Pods-BlockChainKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlockChainKit_Example-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A00CBB645C6772822A70FE474AA31258 /* Pods_BlockChainKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlockChainKit_Tests.framework; path = "Pods-BlockChainKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D68EB7DB2462B64C1DB886793FB2BC /* Pods-BlockChainKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlockChainKit_Tests.modulemap"; sourceTree = "<group>"; };
-		CF9226E73B685E507CB5EE9B4B1CD7B9 /* Pods_BlockChainKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlockChainKit_Tests.framework; path = "Pods-BlockChainKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C504E8591A326E6E65E2C979771B1E /* Pods-BlockChainKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlockChainKit_Example.modulemap"; sourceTree = "<group>"; };
-		F052FEBE6EBB470C70F621A8C45368B7 /* Pods_BlockChainKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlockChainKit_Example.framework; path = "Pods-BlockChainKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +146,8 @@
 		C0B14763FE1FF57142076863FBA9AEE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F052FEBE6EBB470C70F621A8C45368B7 /* Pods_BlockChainKit_Example.framework */,
-				CF9226E73B685E507CB5EE9B4B1CD7B9 /* Pods_BlockChainKit_Tests.framework */,
+				17ABAC6CC945DA8878FB26A634A3C7E4 /* Pods_BlockChainKit_Example.framework */,
+				A00CBB645C6772822A70FE474AA31258 /* Pods_BlockChainKit_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 			);
 			name = "Pods-BlockChainKit_Example";
 			productName = "Pods-BlockChainKit_Example";
-			productReference = F052FEBE6EBB470C70F621A8C45368B7 /* Pods_BlockChainKit_Example.framework */;
+			productReference = 17ABAC6CC945DA8878FB26A634A3C7E4 /* Pods_BlockChainKit_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CD9804BDE23C38807DF6CB87D48F58F7 /* Pods-BlockChainKit_Tests */ = {
@@ -258,7 +258,7 @@
 			);
 			name = "Pods-BlockChainKit_Tests";
 			productName = "Pods-BlockChainKit_Tests";
-			productReference = CF9226E73B685E507CB5EE9B4B1CD7B9 /* Pods_BlockChainKit_Tests.framework */;
+			productReference = A00CBB645C6772822A70FE474AA31258 /* Pods_BlockChainKit_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
