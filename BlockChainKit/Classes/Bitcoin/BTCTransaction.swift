@@ -90,6 +90,33 @@ public struct BTCTransactionOutput {
         data.append(lockingScript)
         return data
     }
+
+    public init(address: String, value: Int64) {
+        self.lockingScript = BTCTransactionOutput.lockingScript(address: address)
+        self.value = value
+    }
+
+    public init(lockingScript: Data, value: Int64) {
+        self.lockingScript = lockingScript
+        self.value = value
+    }
+
+    public init(opReturnAddress: String) {
+        value = 0
+        let addressData = Data(hex: opReturnAddress)
+        var data = Data([0x6a, UInt8(addressData.count)])
+        data.append(addressData)
+        lockingScript = data
+    }
+
+    public static func lockingScript(address: String) -> Data {
+        var data = Data([0x76, 0xa9, 0x14])
+        let publicKey = try! Base58.decode(address).dropLast(4).dropFirst()
+        data.append(publicKey)
+        data.append(contentsOf: [0x88])
+        data.append(contentsOf: [0xac])
+        return data
+    }
 }
 
 public struct BTCTransactionOutPoint {

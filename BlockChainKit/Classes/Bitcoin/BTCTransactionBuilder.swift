@@ -8,20 +8,17 @@
 import Foundation
 
 public enum BTCTransactionBuilder {
-    public static func lockingScript(address: String) -> Data {
-        var data = Data([0x76, 0xa9, 0x14])
-        let publicKey = try! Base58.decode(address).dropLast(4).dropFirst()
-        data.append(publicKey)
-        data.append(contentsOf: [0x88])
-        data.append(contentsOf: [0xac])
-        return data
-    }
+
 
     public static func build(destinations: [(address: String, amount: UInt64)],
-                             utxos: [BTCUnspentTransaction]) throws -> BTCUnsignedTransaction {
-        let outputs = destinations.map { arg -> BTCTransactionOutput in
+                             utxos: [BTCUnspentTransaction],
+                             extendOutput: BTCTransactionOutput? = nil) throws -> BTCUnsignedTransaction {
+        var outputs = destinations.map { arg -> BTCTransactionOutput in
             let (address, amount) = arg
-            return BTCTransactionOutput(lockingScript: lockingScript(address: address), value: Int64(amount))
+            return BTCTransactionOutput(address: address, value: Int64(amount))
+        }
+        if let output = extendOutput {
+            outputs.append(output)
         }
         let unsignedInputs = utxos.map {
             BTCTransactionInput(previousOutput: $0.outpoint, signatureScript: Data(), sequence: UInt32.max)

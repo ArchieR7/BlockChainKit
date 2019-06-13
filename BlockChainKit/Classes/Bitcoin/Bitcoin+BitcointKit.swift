@@ -14,13 +14,16 @@ extension Bitcoin {
                             amount: UInt64,
                             unspentTransactions: [BTCUnspentTransaction],
                             wif: String,
-                            isCompressed: Bool = true) throws -> String {
+                            isCompressed: Bool = true,
+                            extendOutput: BTCTransactionOutput? = nil) throws -> String {
         let utxoSelector = StandardUtxoSelector()
         let (toSpend, fee) = try utxoSelector.select(from: unspentTransactions, targetValue: amount)
         let totalAmount = toSpend.sum()
         let change = totalAmount - amount - fee
         let destinations: [(String, UInt64)] = [(toAddress, amount), (address, change)]
-        let unsignedTx = try BTCTransactionBuilder.build(destinations: destinations, utxos: toSpend)
+        let unsignedTx = try BTCTransactionBuilder.build(destinations: destinations,
+                                                         utxos: toSpend,
+                                                         extendOutput: extendOutput)
         let privateKey = Bitcoin.privateData(wif: wif)!
         let signedTx = try BTCSigner.sign(unsignedTx, with: [privateKey], isCompressed: isCompressed)
         return signedTx.serialzed.toHexString()

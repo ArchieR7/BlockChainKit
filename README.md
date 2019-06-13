@@ -142,7 +142,16 @@ let rawTransaction = try Bitcoin.sign(from: fromAddress,
                                       to: toAddress,
                                       amount: amount,
                                       unspentTransactions: uxtos,
-                                      wif: wif)
+                                      wif: wif)        
+                                      
+// version 1.3.3 supports extend output
+let output = BTCTransactionOutput(opReturnAddress: String)
+let rawTransaction = try Bitcoin.sign(from: fromAddress,
+                                      to: toAddress,
+                                      amount: amount,
+                                      unspentTransactions: uxtos,
+                                      wif: wif,
+                                      extendOutput: output)
 ```
 
 ## Feature
@@ -167,7 +176,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.3.2'
+pod 'BlockChainKit', '~> 1.3.3'
 ```
 
 ## Author
