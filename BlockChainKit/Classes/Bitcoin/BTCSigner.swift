@@ -17,7 +17,7 @@ public enum BTCSigner {
                 RIPEMD160.hash(Bitcoin.publicKey(privateKey: $0, isCompressed: isCompressed).sha256()) == pubkeyHash
             }).first else { continue }
             let sighash = signingTransaction.signatureHash(for: utxo.output, inputIndex: i)
-            let signature = Crypto.sign(key: sighash, data: key)
+            let signature = Crypto.sign(key: key, data: sighash)
             let txin = signingInputs[i]
             let pubkey = Bitcoin.publicKey(privateKey: key, isCompressed: isCompressed)
             let result = unlocking(signature: signature, pubkey: pubkey)
