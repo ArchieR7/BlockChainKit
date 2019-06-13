@@ -164,37 +164,37 @@ public enum DerivationNode {
 }
 
 extension UInt64 {
-    var UInt8ArrayLE: [UInt8] {
+    public var UInt8ArrayLE: [UInt8] {
         return [0, 8, 16, 24, 32, 40, 48, 56].map { UInt8(self >> $0 & 0x00000000000000FF) }
     }
-    var UInt8ArrayBE: [UInt8] {
+    public var UInt8ArrayBE: [UInt8] {
         return [56, 48, 40, 32, 24, 16, 8, 0].map { UInt8(self >> $0 & 0x00000000000000FF) }
     }
 }
 
 extension UInt32 {
-    var UInt8ArrayLE: [UInt8] {
+    public var UInt8ArrayLE: [UInt8] {
         return [0, 8, 16, 24].map { UInt8(self >> $0 & 0x000000FF) }
     }
-    var UInt8ArrayBE: [UInt8] {
+    public var UInt8ArrayBE: [UInt8] {
         return [24, 16, 8, 0].map { UInt8(self >> $0 & 0x000000FF) }
     }
 }
 
 extension UInt16 {
-    var UInt8ArrayLE: [UInt8] {
+    public var UInt8ArrayLE: [UInt8] {
         return [0, 8].map { UInt8(self >> $0 & 0x00FF) }
     }
-    var UInt8ArrayBE: [UInt8] {
+    public var UInt8ArrayBE: [UInt8] {
         return [8, 0].map { UInt8(self >> $0 & 0x00FF) }
     }
 }
 
 extension Int64 {
-    var UInt8ArrayLE: [UInt8] {
+    public var UInt8ArrayLE: [UInt8] {
         return [0, 8, 16, 24, 32, 40, 48, 56].map { UInt8(self >> $0 & 0x00000000000000FF) }
     }
-    var UInt8ArrayBE: [UInt8] {
+    public var UInt8ArrayBE: [UInt8] {
         return [56, 48, 40, 32, 24, 16, 8, 0].map { UInt8(self >> $0 & 0x00000000000000FF) }
     }
 }

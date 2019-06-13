@@ -16,7 +16,7 @@ public struct BTCTransaction {
     public var txOutCount: VarInt { return VarInt(outputs.count) }
     public let outputs: [BTCTransactionOutput]
     public let lockTime: UInt32
-    public var serialzed: Data {
+    public var serialized: Data {
         var data = Data(version.UInt8ArrayLE)
         data.append(txInCount.serialized())
         data.append(contentsOf: inputs.flatMap { $0.serialized })
@@ -25,21 +25,24 @@ public struct BTCTransaction {
         data.append(Data(lockTime.UInt8ArrayLE))
         return data
     }
-    public var txHash: Data { return serialzed.sha256().sha256() }
+    public var txHash: Data { return serialized.sha256().sha256() }
     public var txID: String { return Data(txHash.reversed()).toHexString() }
 
     public func signatureHash(for utxo: BTCTransactionOutput, inputIndex: Int) -> Data {
-        let txin = inputs[inputIndex]
-        var data = Data(version.UInt8ArrayLE)
-        data.append(inputs.reduce(Data(), { $0 + $1.previousOutput.serialized }))
-        data.append(inputs.reduce(Data(), { $0 + Data($1.sequence.UInt8ArrayLE) }))
-        data.append(txin.previousOutput.serialized)
-        data.append(utxo.scriptCode)
-        data.append(Data(txin.sequence.UInt8ArrayLE))
-        data.append(outputs.reduce(Data(), { $0 + $1.serialized }))
-        data.append(Data(lockTime.UInt8ArrayLE))
-        data.append(Data(UInt32(0x01).UInt8ArrayLE))
+        guard inputIndex < inputs.count else {
+            return Data(repeating: 1, count: 1) + Data(repeating: 0, count: 31)
+        }
+        let serializer = TransactionSignatureSerializer(tx: self, utxo: utxo, inputIndex: inputIndex)
+        var data = serializer.serialize()
+        data += UInt32(1).UInt8ArrayLE
         return data.sha256().sha256()
+    }
+
+    public init(version: UInt32, inputs: [BTCTransactionInput], outputs: [BTCTransactionOutput], lockTime: UInt32) {
+        self.version = version
+        self.inputs = inputs
+        self.outputs = outputs
+        self.lockTime = lockTime
     }
 }
 
@@ -72,6 +75,12 @@ public struct BTCTransactionInput {
         data.append(signatureScript)
         data.append(Data(sequence.UInt8ArrayLE))
         return data
+    }
+
+    public init(previousOutput: BTCTransactionOutPoint, signatureScript: Data, sequence: UInt32) {
+        self.previousOutput = previousOutput
+        self.signatureScript = signatureScript
+        self.sequence = sequence
     }
 }
 
@@ -123,4 +132,43 @@ public struct BTCTransactionOutPoint {
     public let hash: Data
     public let index: UInt32
     public var serialized: Data { return hash + Data(index.UInt8ArrayLE) }
+
+    public init(hash: Data, index: UInt32) {
+        self.hash = hash
+        self.index = index
+    }
+}
+
+public struct TransactionSignatureSerializer {
+    var tx: BTCTransaction
+    var utxo: BTCTransactionOutput
+    var inputIndex: Int
+
+    internal func modifiedInput(for i: Int) -> BTCTransactionInput {
+        let txin = tx.inputs[i]
+        let sigScript: Data
+        let sequence: UInt32
+
+        if i == inputIndex {
+            sigScript = utxo.lockingScript
+            sequence = txin.sequence
+        } else {
+            sigScript = Data()
+            sequence = txin.sequence
+        }
+        return BTCTransactionInput(previousOutput: txin.previousOutput, signatureScript: sigScript, sequence: sequence)
+    }
+
+    public func serialize() -> Data {
+        let inputsToSerialize: [BTCTransactionInput]
+        let outputsToSerialize: [BTCTransactionOutput]
+        inputsToSerialize = (0..<tx.inputs.count).map { modifiedInput(for: $0) }
+        outputsToSerialize = tx.outputs
+
+        let tmp = BTCTransaction(version: tx.version,
+                                 inputs: inputsToSerialize,
+                                 outputs: outputsToSerialize,
+                                 lockTime: tx.lockTime)
+        return tmp.serialized
+    }
 }

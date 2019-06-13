@@ -26,6 +26,6 @@ extension Bitcoin {
                                                          extendOutput: extendOutput)
         let privateKey = Bitcoin.privateData(wif: wif)!
         let signedTx = try BTCSigner.sign(unsignedTx, with: [privateKey], isCompressed: isCompressed)
-        return signedTx.serialzed.toHexString()
+        return signedTx.serialized.toHexString()
     }
 }
