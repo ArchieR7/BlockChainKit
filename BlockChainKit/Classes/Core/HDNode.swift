@@ -19,7 +19,7 @@ public struct HDNode {
     public let parentFingerprint: Data?
 
     public var ethPrivateKey: String {
-        return "0x" + privateKey.toHexString()
+        return "0x" + privateKey.toHexString().paddingLeft(size: 64)
     }
     public func WIF(isCompressed: Bool = true) -> String? {
         var data: Data = Data([UInt8(0x80)])
