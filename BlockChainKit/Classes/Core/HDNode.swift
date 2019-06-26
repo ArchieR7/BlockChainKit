@@ -123,7 +123,8 @@ public struct HDNode {
         let factor = BigUInt(digest[0..<32])
         let derivedChainCode = digest[32..<64]
         let curveOrder = BigUInt("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", radix: 16)!
-        let derivedPrivateKey = ((BigUInt(privateKey) + factor) % curveOrder).serialize()
+        var derivedPrivateKey = ((BigUInt(privateKey) + factor) % curveOrder).serialize()
+        derivedPrivateKey = Data(repeating: 0, count: 32 - derivedPrivateKey.count) + derivedPrivateKey
         return HDNode(seed: seed,
                       privateKey: derivedPrivateKey,
                       chainCode: derivedChainCode,

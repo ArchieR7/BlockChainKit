@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BlockChainKit'
-  s.version          = '1.3.3'
+  s.version          = '1.3.4'
   s.summary          = '💰A blockchain toolkit with Swift.'
 
   s.description      = <<-DESC
