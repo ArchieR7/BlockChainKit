@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BlockChainKit'
-  s.version          = '1.3.4'
+  s.version          = '1.4.0'
   s.summary          = '💰A blockchain toolkit with Swift.'
 
   s.description      = <<-DESC
@@ -20,7 +20,7 @@ The BlockChainKit is a Swift library provides mnemonic generation and validation
   s.author           = { 'Archie' => 'https://twitter.com/ChangArchie' }
   s.source           = { :git => 'https://github.com/ArchieR7/BlockChainKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ChangArchie'
-  s.swift_version = '5.0'
+  s.swift_version = '5.1'
   s.ios.deployment_target = '11.0'
   s.source_files = 'BlockChainKit/Classes/**/*'
   
