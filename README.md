@@ -39,15 +39,15 @@ let mnemonicWith256Bytes = Mnemonic.create(strength: .words24)
 ### Validate mnemonic
 ```swift
 do {
-try Mnemonic.valdiate(mnemonic)
+  try Mnemonic.valdiate(mnemonic)
 } catch {
-if let error = error as? MnemonicError {
-switch error {
-case .length: // length should be 12, 15, 18, 21, 24
-case .invalid: // validate mnemonic with check sum
-case let .words(words): // contains invalid words
-}
-}
+  if let error = error as? MnemonicError {
+    switch error {
+      case .length: // length should be 12, 15, 18, 21, 24
+      case .invalid: // validate mnemonic with check sum
+      case let .words(words): // contains invalid words
+    }
+  }
 }
 
 // valdiate with specific language
@@ -68,14 +68,14 @@ let BIP32RootKey = node.privateExtendedKey()
 ### Base58 encode and decode
 ```swift
 do {
-try Base58.encode(node.privateExtendedKey())
+  try Base58.encode(node.privateExtendedKey())
 } catch {
-if let error = error as? BaseCodableError {
-switch error {
-case .decode: // decode error
-case .encode: // encode error
-}
-}
+  if let error = error as? BaseCodableError {
+    switch error {
+      case .decode: // decode error
+      case .encode: // encode error
+    }
+  }
 }
 ```
 
@@ -84,7 +84,7 @@ and it provides a protocol to implement encode or decode with specific base.
 ```swift
 // you can create a new base with alphabet
 struct Base58: BaseCodable {
-static let alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+  static let alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 }
 ```
 
@@ -116,11 +116,11 @@ let address = Bitcoin.address(privateKey: privateKey)
 ### Create an ETH transaction
 ```swift
 let rawTransaction = Ethereum.RawTransaction(nonce: "0x6e",
-gasPrice: "0x040000000000",
-gasLimit: "0x060000",
-toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
-value: "0x015950000000000000000000",
-data: "")
+                                             gasPrice: "0x040000000000",
+                                             gasLimit: "0x060000",
+                                             toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
+                                             value: "0x015950000000000000000000",
+                                             data: "")
 // chainID supports zero, mainnet = 1, morden = 2, ropsten = 3, rinkeby = 4, goerli = 5, kovan = 42
 // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md
 //
@@ -129,11 +129,11 @@ try rawTransaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 // Create a BNB
 // contract: 0xB8c77482e45F1F44dE1745F52C74426C631bDD52
 let ERC20Transaction = Ethereum.RawTransaction(nonce: "0x6e",
-gasPrice: "0x040000000000",
-gasLimit: "0x060000",
-toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
-value: "0x015950000000000000000000",
-contract: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52")
+                                               gasPrice: "0x040000000000",
+                                               gasLimit: "0x060000",
+                                               toAddress: "0x85b7ca161C311d9A5f0077d5048CAdFace89a267",
+                                               value: "0x015950000000000000000000",
+                                               contract: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52")
 
 try ERC20Transaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 ```
@@ -142,31 +142,31 @@ try ERC20Transaction.sign(privateKey: privateKeyData, chainID: .mainnet)
 ```swift
 // sign with from address, to address, amount, uxtos and wif of private key
 let rawTransaction = try Bitcoin.sign(from: fromAddress,
-to: toAddress,
-amount: amount,
-unspentTransactions: uxtos,
-wif: wif)        
+                                      to: toAddress,
+                                      amount: amount,
+                                      unspentTransactions: uxtos,
+                                      wif: wif)        
 
 // version 1.3.3 supports extend output
 let output = BTCTransactionOutput(opReturnAddress: String)
 let rawTransaction = try Bitcoin.sign(from: fromAddress,
-to: toAddress,
-amount: amount,
-unspentTransactions: uxtos,
-wif: wif,
-extendOutput: output)
+                                      to: toAddress,
+                                      amount: amount,
+                                      unspentTransactions: uxtos,
+                                      wif: wif,
+                                      extendOutput: output)
 ```
 
 ### Create a CIC transaction
 ```swift
 // version 1.4.0 supports
 let parameter = CIC.CICSignParameter(privateKey: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca",
-address: "cxf431130f518b149fed3d6dfb485741954ed4d2d1",
-balance: "100000000000000000",
-type: "cic",
-fee: "100000000000000000",
-nonce: "31",
-coin: "cic")
+                                     address: "cxf431130f518b149fed3d6dfb485741954ed4d2d1",
+                                     balance: "100000000000000000",
+                                     type: "cic",
+                                     fee: "100000000000000000",
+                                     nonce: "31",
+                                     coin: "cic")
 let rawTransaction = CIC.sign(parameter: parameter)
 ```
 
