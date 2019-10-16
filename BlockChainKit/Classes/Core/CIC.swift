@@ -11,7 +11,7 @@ import secp256k1
 
 public enum CIC {
     public struct CICSignParameter {
-        let privateKey, address, balance, type, fee, nonce, coin: String
+        public let privateKey, address, balance, type, fee, nonce, coin: String
         
         public init(privateKey: String, address: String, balance: String, type: String, fee: String, nonce: String, coin: String) {
             self.privateKey = privateKey

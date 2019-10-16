@@ -193,7 +193,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.4.0'
+pod 'BlockChainKit', '~> 1.4.1'
 ```
 
 ## Author
