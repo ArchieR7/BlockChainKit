@@ -86,7 +86,16 @@ public extension Ethereum {
                               value.isEmpty ? Data([]) : Data(hex: value),
                               Data(hex: data)]
             if chainID.rawValue > 0 {
-                encodeData.append(contentsOf:[Data([UInt8(chainID.rawValue)]), Data([]), Data([])])
+                var uint8Array = UInt32(chainID.rawValue).UInt8ArrayBE
+                for unit in uint8Array {
+                    if unit == 0 {
+                        uint8Array = Array(uint8Array.dropFirst())
+                    } else {
+                        break
+                    }
+                }
+                let data = Data(uint8Array)
+                encodeData.append(contentsOf:[data, Data([]), Data([])])
             }
             return try RLP.encode(nestedArrayOfData: encodeData)
         }

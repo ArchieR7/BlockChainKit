@@ -58,9 +58,14 @@ a05535d28c1487a531788ee59547a4085c8b8593f4e4f477954059ac87b3d717b2
                                                        contract: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52")
         let raw2 = try! ERC20Transaction.sign(privateKey: privateKeyData, chainID: .zero).toHexString()
         XCTAssertEqual(defaultERC20, raw2)
-        print(raw)
-        print(defualtRaw)
-        print(raw2)
-
+        let gtxcTransaction = Ethereum.RawTransaction(nonce: "0xa",
+                                                      gasPrice: "0xa",
+                                                      gasLimit: "0xa",
+                                                      toAddress: "f431130f518b149fed3d6dfb485741954ed4d2d1",
+                                                      value: "0xa")
+        let privateKeyData2 = Data(Array<UInt8>(hex: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca"))
+        let raw3 = try! gtxcTransaction.sign(privateKey: privateKeyData2, chainID: .custom(10142241)).toHexString()
+        let gtxcRawTx = "f8610a0a0a94f431130f518b149fed3d6dfb485741954ed4d2d10a808401358465a00ff4a8e0d0efcb1e33768b5a74ef6ae29adb68b0a97a6deb5b331e8aafd54550a00b56a75dca1a74121c80a71d9dec425dc76bf41ae1c72b0380cbc14c08bd2f82"
+        XCTAssertEqual(gtxcRawTx, raw3)
     }
 }
