@@ -34,9 +34,21 @@ public enum Ethereum {
             }.joined()
     }
 
-    public enum ChainID: Int {
-        case zero = 0, mainnet, morden, ropsten, rinkeby, goerli
-        case kovan = 42
+    public enum ChainID {
+        case zero, mainnet, morden, ropsten, rinkeby, goerli, kovan, custom(Int)
+        
+        var rawValue: Int {
+            switch self {
+            case .zero: return 0
+            case .mainnet: return 1
+            case .morden: return 2
+            case .ropsten: return 3
+            case .rinkeby: return 4
+            case .goerli: return 5
+            case .kovan: return 42
+            case let .custom(int): return int
+            }
+        }
     }
 }
 

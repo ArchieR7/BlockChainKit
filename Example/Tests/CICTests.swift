@@ -50,4 +50,14 @@ class CICTests: XCTestCase {
         let sign = CIC.sign(parameter: parameter)
         XCTAssertEqual(sign, result)
     }
+    
+    func testTxid() {
+        print(CIC.message(parameter: CIC.CICSignParameter(privateKey: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca",
+                                                    address: "cxf431130f518b149fed3d6dfb485741954ed4d2d1",
+                                                    balance: "100000000000000000",
+                                                    type: "cic",
+                                                    fee: "100000000000000000",
+                                                    nonce: "32",
+                                                    coin: "ci1")).sha256())
+    }
 }

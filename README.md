@@ -22,6 +22,9 @@ Supports Bitcoin to sign transaction with
 #### 2019-10-15
 Supports CIC signature feature.
 
+#### 2019-10-18
+Now you can set custom ChainID in Ethereum signature.
+
 ## Usage
 
 ### Create mnemonic
@@ -193,7 +196,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.4.1'
+pod 'BlockChainKit', '~> 1.4.2'
 ```
 
 ## Author
