@@ -63,7 +63,17 @@ public extension Ethereum {
                     value: String,
                     contract: String? = nil) {
             func convertToHex(_ value: String) -> String {
-                value.hasPrefix("0x") ? value : String(format: "%llx", UInt64(value) ?? 0)
+                var hexValue: String
+                if value.hasPrefix("0x") {
+                    hexValue = value
+                } else {
+                    hexValue = String(format: "%llx", UInt64(value) ?? 0)
+                }
+                if hexValue.replacingOccurrences(of: "0x", with: String()).count % 2 == 1 {
+                    return "0x0\(hexValue.replacingOccurrences(of: "0x", with: String()))"
+                } else {
+                    return hexValue
+                }
             }
 
             self.nonce = convertToHex(nonce)
