@@ -55,9 +55,13 @@ public enum CIC {
     }
     
     public static func message(parameter: CICSignParameter) -> String {
+        func convertToHex(_ value: String) -> String {
+            value.hasPrefix("0x") ? value : String(format: "%llx", UInt64(value) ?? 0)
+        }
+
         let wx = "wx\(publicKey(privateKey: parameter.privateKey))"
         let gx = "gx00\(parameter.address[parameter.address.count - 40..<parameter.address.count])"
-        let hx = "hx\(String(format: "%02x", Int(parameter.nonce) ?? 0).paddingLeft(size: 32))"
+        let hx = "hx\(convertToHex(parameter.nonce).paddingLeft(size: 32))"
         let ix = "ix\(parameter.fee.paddingLeft(size: 32))"
         let kx = "kx\(parameter.type.paddingLeft(size: 8))"
         let token = parameter.coin.bytes.toHexString().paddingLeft(size: 8)

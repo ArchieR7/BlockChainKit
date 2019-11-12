@@ -12,18 +12,21 @@ and it implements `NSLinguisticTagger` to detect mnemonic language automatically
 There is also providing function to create a raw transaction with `Ethereum.RawTransaction` both of Ethereum and ERC-20 tokens,
 `.sign(privateKey: Data, chainID: Int)` is working well 💪.
 
+#### 2019-11-12
+ETH's inputs support decimal.
+
+#### 2019-10-18
+Now you can set custom ChainID in Ethereum signature.
+
+#### 2019-10-15
+Supports CIC signature feature.
+
 #### 2019-06-04
 Supports Bitcoin to sign transaction with 
 - from and to address
 - WIF of private key
 - unspent transactions
 - amount
-
-#### 2019-10-15
-Supports CIC signature feature.
-
-#### 2019-10-18
-Now you can set custom ChainID in Ethereum signature.
 
 ## Usage
 
@@ -196,7 +199,7 @@ BlockChainKit is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BlockChainKit', '~> 1.4.2'
+pod 'BlockChainKit', '~> 1.4.4'
 ```
 
 ## Author

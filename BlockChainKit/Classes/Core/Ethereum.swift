@@ -62,17 +62,21 @@ public extension Ethereum {
                     toAddress: String,
                     value: String,
                     contract: String? = nil) {
-            self.nonce = nonce
-            self.gasPrice = gasPrice
-            self.gasLimit = gasLimit
+            func convertToHex(_ value: String) -> String {
+                value.hasPrefix("0x") ? value : String(format: "%llx", UInt64(value) ?? 0)
+            }
+
+            self.nonce = convertToHex(nonce)
+            self.gasPrice = convertToHex(gasPrice)
+            self.gasLimit = convertToHex(gasLimit)
             if let contract = contract {
                 self.toAddress = contract
                 let address = toAddress.replacingOccurrences(of: "0x", with: String())
-                let amount = value.replacingOccurrences(of: "0x", with: String()).paddingLeft(size: 64)
+                let amount = convertToHex(value).replacingOccurrences(of: "0x", with: String()).paddingLeft(size: 64)
                 self.data = "a9059cbb000000000000000000000000" + address + amount
                 self.value = String()
             } else {
-                self.value = value
+                self.value = convertToHex(value)
                 self.toAddress = toAddress
                 self.data = String()
             }
