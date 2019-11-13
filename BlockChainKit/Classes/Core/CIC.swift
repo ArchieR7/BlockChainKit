@@ -63,9 +63,9 @@ public enum CIC {
                 hexValue = String(format: "%llx", UInt64(value) ?? 0)
             }
             if hexValue.replacingOccurrences(of: "0x", with: String()).count % 2 == 1 {
-                return "0x0\(hexValue.replacingOccurrences(of: "0x", with: String()))"
+                return "0\(hexValue.replacingOccurrences(of: "0x", with: String()))"
             } else {
-                return hexValue
+                return hexValue.replacingOccurrences(of: "0x", with: String())
             }
         }
 

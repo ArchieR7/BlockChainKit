@@ -26,13 +26,16 @@ class CICTests: XCTestCase {
     
     func testTGC() {
         let result = "313037323032303834373830353732353738303034363930333535313839373035383030303836383835363133393135343233363038393738393533323631353735333134363532323838323837783535383337343630313636353932333434353633363433383935373336353634353133373338343832343731393732333733383131313434393436313932343638333439333132303531363931"
-        signCIC(parameter: CIC.CICSignParameter(privateKey: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca",
-                                                address: "f431130f518b149fed3d6dfb485741954ed4d2d1",
-                                                balance: "100000000000000000",
-                                                type: "tgc",
-                                                fee: "100000000000000000",
-                                                nonce: "7",
-                                                coin: "tgc"), result: result)
+        let message = "wx04306fee9170764458c5e3faa223ee4d83dd4fb78bc4ca2d9c8900fb93a249763a039de50934307372ebcab41a45c3ecde8cd8b8383cad5a3e615c8fd7bb9c0136gx00f431130f518b149fed3d6dfb485741954ed4d2d1hx00000000000000000000000000000007ix00000000000000100000000000000000kx00000tgclx000sx00000000000000100000000000000000tx0000null"
+        let parameter = CIC.CICSignParameter(privateKey: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca",
+                                             address: "f431130f518b149fed3d6dfb485741954ed4d2d1",
+                                             balance: "100000000000000000",
+                                             type: "tgc",
+                                             fee: "100000000000000000",
+                                             nonce: "7",
+                                             coin: "tgc")
+        XCTAssertEqual(CIC.message(parameter: parameter), message)
+        signCIC(parameter: parameter, result: result)
     }
     
     func testCIC1() {
@@ -52,12 +55,24 @@ class CICTests: XCTestCase {
     }
     
     func testTxid() {
+        let message = CIC.message(parameter: CIC.CICSignParameter(privateKey: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca",
+                                                                  address: "cxf431130f518b149fed3d6dfb485741954ed4d2d1",
+                                                                  balance: "100000000000000000",
+                                                                  type: "cic",
+                                                                  fee: "100000000000000000",
+                                                                  nonce: "31",
+                                                                  coin: "cic"))
+        print(message)
+        print(message.sha256())
+    }
+
+    func testAITC() {
         print(CIC.message(parameter: CIC.CICSignParameter(privateKey: "d03353d9ea60e4a2277c1fcf35b858a46c6f60001a8a5ddd32b48f234ee0b9ca",
-                                                    address: "cxf431130f518b149fed3d6dfb485741954ed4d2d1",
-                                                    balance: "100000000000000000",
-                                                    type: "cic",
-                                                    fee: "100000000000000000",
-                                                    nonce: "32",
-                                                    coin: "ci1")).sha256())
+                                                          address: "cxf431130f518b149fed3d6dfb485741954ed4d2d1",
+                                                          balance: "100000000000000000",
+                                                          type: "aitc",
+                                                          fee: "100000000000000000",
+                                                          nonce: "15",
+                                                          coin: "aitc")).sha256())
     }
 }

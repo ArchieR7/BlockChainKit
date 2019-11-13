@@ -16,6 +16,23 @@ class EthereumTests: XCTestCase {
         XCTAssertEqual(address, Ethereum.address(privateKey: privateKey))
     }
 
+    func testSignature() {
+        let privateKey = "a6ce2f4f2cf9cef4a6ea6d94c5b3100ea2a506cbfa9dcca46a67d36f6957a651"
+        let privateKeyData = Data(Array<UInt8>(hex: privateKey))
+        let rawTransaction = Ethereum.RawTransaction(nonce: "0xd",
+                                                     gasPrice: "2000000000",
+                                                     gasLimit: "120000",
+                                                     toAddress: "0xf613dcf472eff3f96a5f4e2202d41cf725dedbf0",
+                                                     value: "100000000000000000",
+                                                     contract: "0x6454340896b9ae47921809de9035f4dadea3ac8b")
+
+        let defaultValue = """
+    f8a90d84773594008301d4c0946454340896b9ae47921809de9035f4dadea3ac8b80b844a9059cbb000000000000000000000000f613dcf472eff3f96a5f4e2202d41cf725dedbf0000000000000000000000000000000000000000000000000016345785d8a00001ca0c6135b7858188440186ff54ff1990b72ad7d75d7ee44b69454c94871d6c128dca07e7293eb3159584c4e44f5308d9c0315bd0a9e642263d6b964db1d04638f1852
+    """.replacingOccurrences(of: "\n", with: String())
+        let defualtRaw = try! rawTransaction.sign(privateKey: privateKeyData, chainID: .zero).toHexString()
+        XCTAssertEqual(defaultValue, defualtRaw)
+    }
+
     func testETHSignature() {
         let privateKey = "e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109"
         let privateKeyData = Data(Array<UInt8>(hex: privateKey))
