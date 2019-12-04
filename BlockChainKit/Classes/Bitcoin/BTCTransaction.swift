@@ -122,8 +122,7 @@ public struct BTCTransactionOutput {
         var data = Data([0x76, 0xa9, 0x14])
         let publicKey = try! Base58.decode(address).dropLast(4).dropFirst()
         data.append(publicKey)
-        data.append(contentsOf: [0x88])
-        data.append(contentsOf: [0xac])
+        data.append(contentsOf: [0x88, 0xac])
         return data
     }
 }

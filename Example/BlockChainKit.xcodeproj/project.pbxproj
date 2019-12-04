@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21A66B212355733100B9B13B /* CICTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A66B202355733100B9B13B /* CICTests.swift */; };
+		21BBB47C2383C410008A629B /* BTCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BBB47B2383C410008A629B /* BTCTest.swift */; };
 		2E131AB3229FBB8E00429105 /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E131AB2229FBB8E00429105 /* MnemonicTests.swift */; };
 		2E131AB5229FBBF200429105 /* EthereumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E131AB4229FBBF200429105 /* EthereumTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		21A66B202355733100B9B13B /* CICTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICTests.swift; sourceTree = "<group>"; };
+		21BBB47B2383C410008A629B /* BTCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCTest.swift; sourceTree = "<group>"; };
 		2E131AB2229FBB8E00429105 /* MnemonicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
 		2E131AB4229FBBF200429105 /* EthereumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumTests.swift; sourceTree = "<group>"; };
 		2EB519B122A11DC0009D2102 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = secp256k1.framework; path = ../BlockChainKit/Classes/Core/secp256k1.framework; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				21BBB47B2383C410008A629B /* BTCTest.swift */,
 				21A66B202355733100B9B13B /* CICTests.swift */,
 				2E131AB4229FBBF200429105 /* EthereumTests.swift */,
 				2E131AB2229FBB8E00429105 /* MnemonicTests.swift */,
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E131AB5229FBBF200429105 /* EthereumTests.swift in Sources */,
+				21BBB47C2383C410008A629B /* BTCTest.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				2E131AB3229FBB8E00429105 /* MnemonicTests.swift in Sources */,
 				21A66B212355733100B9B13B /* CICTests.swift in Sources */,
